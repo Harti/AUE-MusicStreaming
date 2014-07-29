@@ -24,6 +24,8 @@ class ScreenerController extends BaseController {
 		$attempt->disliked_features = Input::get("disliked-features");
 		$attempt->disliked_other = (Input::get("disliked-other") ? Input::get("disliked-other-input") : "");
 		$attempt->save();
+		$attempt->completed_at = $attempt->updated_at;
+		$attempt->save();
 		
 		return View::make('screener.success')->with('attempt', $attempt);
 	}
@@ -45,13 +47,12 @@ class ScreenerController extends BaseController {
 			Session::flash('error', 'Bei der Übermittlung deiner Daten ist ein Fehler aufgetreten. Bitte prüfe das Formular und versuche es erneut.');
 			return View::make('screener.success')->withErrors($validator)->with('attempt', $attempt);
 		}
-		
 		$volunteer->email = Input::get('email');
 		$volunteer->skype = Input::get('skype');
 		$volunteer->facebook = Input::get('facebook');
-		
 		$volunteer->save();
 		
+		Session::forget('error');
 		return View::make('screener.complete');
 	}
 	

@@ -16,8 +16,8 @@
 @section('page-content')
 <section id="step1" data-id="1">
 	<div class="row">
-		<div class="small-12 columns">
-			<h2>Du &hearts; Musik?</h2>
+		<div class="small-12 columns text-center">
+			<h2 id="love">Du <i class="fa fa-heart"></i> Musik?</h2>
 			<p>Sehr gut! Wir untersuchen im Rahmen eines Kurses der Universität Regensburg die Vor- und Nachteile von Musik-Streamingdiensten und benötigen hierzu <strong>deine Einschätzung</strong>.</p>   
 			<p>Es geht um folgende Dienste &ndash; du musst sie jedoch nicht kennen, um uns helfen zu können:</p>
 			<div class="row dienste">
