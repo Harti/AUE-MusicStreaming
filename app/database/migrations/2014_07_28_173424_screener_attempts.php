@@ -15,7 +15,6 @@ class ScreenerAttempts extends Migration {
 		Schema::create('screener_attempts', function($table)
 		{
 			$table->increments('id');
-			$table->integer('user_id');
 			$table->timestamp('created_at');
 			$table->timestamp('updated_at');
 			$table->timestamp('completed_at')->nullable();
