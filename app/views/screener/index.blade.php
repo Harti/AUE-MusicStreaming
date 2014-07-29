@@ -112,7 +112,7 @@
 		</div>
 		<hr />
 		<input type="hidden" name="attempt" value="{{ $attempt->id }}" />
-		<a class="large button expand disabled" id="finish"><i class="fa fa-check-circle"></i> Umfrage fertigstellen</a>
+		<a class="large radius button expand disabled" id="finish"><i class="fa fa-check-circle"></i> Umfrage fertigstellen</a>
 		{{ Form::close() }}
 	</div>
 </section>

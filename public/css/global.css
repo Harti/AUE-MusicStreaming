@@ -86,3 +86,22 @@ input.inline {
 .button.disabled {
 	opacity: 0.4;
 }
+
+#status {
+	font-weight: bold;
+	padding: 4px;
+}
+
+#status.error {
+	color: #fff;
+	background-color: #A00;
+}
+
+p.error:empty {
+	height: 0;
+}
+
+p.error {
+	color: #D00 !important;
+	font-weight: bold;
+}
