@@ -1,21 +1,51 @@
 body {
 	background: url('../img/crowd.jpg') no-repeat center center;
+	background-attachment: fixed;
 	background-size: cover; 
+	overflow-y: scroll;
+}
+
+#content {
+	margin-top: 20px;
+}
+
+#content p {
+	line-height: 1.5em;
+	font-size: 15pt;
 }
 
 #screenerHeadUnit {
 	position: relative;
 	background: rgba(0, 0, 0, 0.5);
+	padding: 20px 0;
 }
 
-#screenerHeadUnit h1 {
+#logo {
+	height: 85px;
+	width: 180px;
 	background-image: url('../img/ur.png');
 	background-repeat: no-repeat;
 	background-position: top left;
-	
-	margin: 16px 0;
-	padding-top: 90px;	
-	color: white;
-	font-size: 48px;
+}
+
+#screenerHeadUnit h1 {	
+	font-size: 38px;
+	line-height: 1.2em;
 	text-shadow: 0px 0px 5px rgba(0,0,0,.7);
+}
+
+#dienste {
+	margin: 30px inherit;
+}
+
+.bubble {
+	background: rgba(222,222,222,.3);
+	border-radius: 100px;
+	height: 160px;
+	width: 160px;
+	margin: 10px auto;
+	
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('../img/spotify.png');
 }
