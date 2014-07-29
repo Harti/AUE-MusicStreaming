@@ -40,7 +40,7 @@
 			</div>
 			<h3>Die Umfrage dauert nur ungefähr <strong>10-15 Minuten</strong> und sollte sehr entspannt sein.</h3>
 			<p class="show-for-small-only">Wenn du diese Seite mit deinem Smartphone besuchst, ist die Umfrage vermutlich geringfügig aufwändiger, da du deinen Browser mehrmals benötigst.</p>
-			<p>Wenn du fertig bist, hast du die Chance auf einen Gutschein von Amazon.</p>
+			<p>Wenn du fertig bist, kannst du dir einen Gutschein von Amazon verdienen.</p>
 			<hr />
 			<a class="radius large button expand forward"><i class="fa fa-arrow-circle-right"></i> Umfrage starten</a>
 		</div>
