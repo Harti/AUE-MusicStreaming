@@ -1,0 +1,21 @@
+body {
+	background: url('../img/crowd.jpg') no-repeat center center;
+	background-size: cover; 
+}
+
+#screenerHeadUnit {
+	position: relative;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#screenerHeadUnit h1 {
+	background-image: url('../img/ur.png');
+	background-repeat: no-repeat;
+	background-position: top left;
+	
+	margin: 16px 0;
+	padding-top: 90px;	
+	color: white;
+	font-size: 48px;
+	text-shadow: 0px 0px 5px rgba(0,0,0,.7);
+}
