@@ -26,7 +26,7 @@
 				<div class="question">
 					<p>Wir benötigen Freiwillige, die an einer "Tagebuch-Studie" <strong>(5 Tage)</strong> teilnehmen.</p>
 					<p>Das sähe so aus, dass du einen der vier Streaming-Dienste <strong>über einen Zeitraum von fünf Tagen</strong> benutzen sollst &ndash; und uns jeden Abend eine kurze Umfrage (wieder ca. 10-15 Minuten) ausfüllen müsstest.</p>
-					<p>Die Studie findet in einem von dir zu wählenden Zeitraum zwischen dem 18.08.2014 und 10.09.2014 statt.</p>
+					<p>Die Studie findet in einem von dir zu wählenden Zeitraum zwischen dem 20.08.2014 und 10.09.2014 statt.</p>
 					<p>Unter allen 20 Teilnehmern werden 5 Amazon-Gutscheine im Wert von jeweils 10 Euro verlost.</p>
 					<h3>Wenn du dies nicht möchtest, kannst du diese Seite einfach schließen. <i class="fa fa-smile-o fa-lg"></i></h3>
 				</div>
