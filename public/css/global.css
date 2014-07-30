@@ -58,6 +58,18 @@ h2#love {
 	background-image: url('../img/spotify.png');
 }
 
+.bubble.deezer {
+	background-image: url('../img/deezer.png');
+}
+
+.bubble.rdio {
+	background-image: url('../img/rdio.png');
+}
+
+.bubble.xboxmusic {
+	background-image: url('../img/xboxmusic.png');
+}
+
 .bubble a {
 	display: block;
 	height: 100%;

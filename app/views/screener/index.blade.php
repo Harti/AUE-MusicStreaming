@@ -22,19 +22,19 @@
 			<p>Es geht um folgende Dienste &ndash; du musst sie jedoch nicht kennen, um uns helfen zu können:</p>
 			<div class="row dienste">
 				<div class="small-12 medium-6 large-3 columns">
+					<div class="bubble deezer">
+					</div>
+				</div>
+				<div class="small-12 medium-6 large-3 columns">
+					<div class="bubble xboxmusic">
+					</div>
+				</div>
+				<div class="small-12 medium-6 large-3 columns">
 					<div class="bubble spotify">
 					</div>
 				</div>
 				<div class="small-12 medium-6 large-3 columns">
-					<div class="bubble">
-					</div>
-				</div>
-				<div class="small-12 medium-6 large-3 columns">
-					<div class="bubble">
-					</div>
-				</div>
-				<div class="small-12 medium-6 large-3 columns">
-					<div class="bubble">
+					<div class="bubble rdio">
 					</div>
 				</div>
 			</div>
@@ -49,24 +49,27 @@
 <section id="step2" data-id="2">
 	<div class="row">
 		<h4>Schritt 1 von 1</h4>
-		<h2>Sieh dir die Webseiten der vier Streamingdienste an:</h2>
+		<h2>Sieh dir die Webseiten der vier Streamingdienste an und erkundige nach ihrem Leistungsumfang:</h2>
 		<p>(Klicke auf einen Dienst, um zur dazugehörigen Webseite zu springen.)</p>
 		<div class="row dienste">
+			<div class="small-12 medium-6 large-3 columns">
+				<div class="bubble deezer">
+					<a href="http://www.deezer.com/features/" target="_blank"></a>
+				</div>
+			</div>
+			<div class="small-12 medium-6 large-3 columns">
+				<div class="bubble xboxmusic">
+					<a href="http://music.xbox.com/de/" target="_blank"></a>
+				</div>
+			</div>
 			<div class="small-12 medium-6 large-3 columns">
 				<div class="bubble spotify">
 					<a href="http://www.spotify.com/de/" target="_blank"></a>
 				</div>
 			</div>
 			<div class="small-12 medium-6 large-3 columns">
-				<div class="bubble">
-				</div>
-			</div>
-			<div class="small-12 medium-6 large-3 columns">
-				<div class="bubble">
-				</div>
-			</div>
-			<div class="small-12 medium-6 large-3 columns">
-				<div class="bubble">
+				<div class="bubble rdio">
+					<a href="http://www.rdio.com/" target="_blank"></a>
 				</div>
 			</div>
 		</div>
@@ -75,10 +78,10 @@
 			<div class="small-12 medium-8 medium-centered columns">
 				<div class="question">
 					<h3>Bei welchem der Dienste würdest du dich <em>am ehesten</em> registrieren?</h3>
-					<input type="radio" name="preferred-service" id="preferred1" value="1" /><label for="preferred1">Spotify</label><br />
-					<input type="radio" name="preferred-service" id="preferred2" value="2" /><label for="preferred2">Spotify</label><br />
+					<input type="radio" name="preferred-service" id="preferred1" value="1" /><label for="preferred1">Deezer</label><br />
+					<input type="radio" name="preferred-service" id="preferred2" value="2" /><label for="preferred2">Xbox Music</label><br />
 					<input type="radio" name="preferred-service" id="preferred3" value="3" /><label for="preferred3">Spotify</label><br />
-					<input type="radio" name="preferred-service" id="preferred4" value="4" /><label for="preferred4">Spotify</label>
+					<input type="radio" name="preferred-service" id="preferred4" value="4" /><label for="preferred4">Rdio</label>
 				</div>
 			</div>
 			<div class="small-12 medium-8 medium-centered columns">
@@ -94,10 +97,10 @@
 			<div class="small-12 medium-8 medium-centered columns">
 				<div class="question">
 					<h3>Bei welchem der Dienste würdest du dich <em>am unwahrscheinlichsten</em> registrieren?</h3>
-					<input type="radio" name="disliked-service" id="disliked1" value="1" /><label for="disliked1">Spotify</label><br />
-					<input type="radio" name="disliked-service" id="disliked2" value="2" /><label for="disliked2">Spotify</label><br />
+					<input type="radio" name="disliked-service" id="disliked1" value="1" /><label for="disliked1">Deezer</label><br />
+					<input type="radio" name="disliked-service" id="disliked2" value="2" /><label for="disliked2">Xbox Music</label><br />
 					<input type="radio" name="disliked-service" id="disliked3" value="3" /><label for="disliked3">Spotify</label><br />
-					<input type="radio" name="disliked-service" id="disliked4" value="4" /><label for="disliked4">Spotify</label>
+					<input type="radio" name="disliked-service" id="disliked4" value="4" /><label for="disliked4">Rdio</label>
 				</div>
 			</div>
 			<div class="small-12 medium-8 medium-centered columns">
