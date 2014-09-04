@@ -34,7 +34,7 @@
 					</div>
 				</div>
 			</div>
-			<h3>Die Umfrage dauert nur ungefähr <strong>10-15 Minuten</strong> und sollte sehr entspannt sein.</h3>
+			<h3>Die Umfrage dauert nur ungefähr <strong>5-8 Minuten</strong> und sollte sehr entspannt sein.</h3>
 			<p class="show-for-small-only">Wenn du diese Seite mit deinem Smartphone besuchst, ist die Umfrage vermutlich geringfügig aufwändiger, da du deinen Browser mehrmals benötigst.</p>
 			<hr />
 			<a class="radius large button expand forward"><i class="fa fa-arrow-circle-right"></i> Umfrage starten</a>

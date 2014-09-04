@@ -120,4 +120,5 @@ p.error:empty {
 p.error {
 	color: #D00 !important;
 	font-weight: bold;
+	margin-bottom: 4px;
 }
