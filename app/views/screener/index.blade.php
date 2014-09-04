@@ -21,7 +21,7 @@
 			<p>Sehr gut! Wir untersuchen im Rahmen eines Kurses der Universität Regensburg die Vor- und Nachteile von Musik-Streamingdiensten und benötigen hierzu <strong>deine Einschätzung</strong>.</p>   
 			<p>Es geht um folgende Dienste &ndash; du musst sie jedoch nicht kennen, um uns helfen zu können:</p>
 			<div class="row dienste">
-				<div class="medium-8 large-6 medium-centered columns">
+				<div class="small-12 medium-8 large-6 medium-centered columns">
 					<div class="row">
 						<div class="small-12 medium-6 columns">
 							<div class="bubble spotify">
@@ -44,10 +44,10 @@
 <section id="step2" data-id="2">
 	<div class="row">
 		<h4>Schritt 1 von 1</h4>
-		<h2>Sieh dir die Webseiten der beiden Streamingdienste an und erkundige nach ihrem Leistungsumfang:</h2>
+		<h2>Sieh dir die Webseiten dieser beiden Streamingdienste an und erkundige nach ihrem Leistungsumfang:</h2>
 		<p>(Klicke auf einen Dienst, um zur dazugehörigen Webseite zu springen.)</p>
 		<div class="row dienste">
-			<div class="medium-8 large-6 medium-centered columns">
+			<div class="small-12 medium-8 large-6 medium-centered columns">
 				<div class="row">
 					<div class="small-12 medium-6 columns">
 						<div class="bubble spotify">
