@@ -29,7 +29,7 @@ class Volunteers extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('volunteers');
+		Schema::dropIfExists('volunteers');
 	}
 
 }

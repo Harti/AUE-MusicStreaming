@@ -29,7 +29,7 @@ class DiaryAttempts extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('diary_attempts');
+		Schema::dropIfExists('diary_attempts');
 	}
 
 }

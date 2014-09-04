@@ -38,7 +38,7 @@ class ScreenerAttempts extends Migration {
 	 */
 	public function down()
 	{
-		Schema::down('screener_attempts');
+		Schema::dropIfExists('screener_attempts');
 	}
 
 }

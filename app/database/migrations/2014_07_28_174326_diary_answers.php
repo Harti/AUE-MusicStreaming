@@ -25,7 +25,7 @@ class DiaryAnswers extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('diary_answers');
+		Schema::dropIfExists('diary_answers');
 	}
 
 }
