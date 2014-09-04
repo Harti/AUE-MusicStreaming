@@ -22,30 +22,16 @@ $(function()
 			groupsFilled++;
 		}
 		
-		if($("input[name=disliked-service]").is(":checked"))
+		if($("input[name=preferred-known]").is(":checked")
+			|| $("input[name=preferred-look]").is(":checked")
+			|| $("input[name=preferred-features]").is(":checked")
+			|| $("input[name=preferred-other]").is(":checked"))
 		{
 			console.log("2");
 			groupsFilled++;
 		}
 		
-		if($("input[name=preferred-known]").is(":checked")
-		|| $("input[name=preferred-look]").is(":checked")
-		|| $("input[name=preferred-features]").is(":checked")
-		|| $("input[name=preferred-other]").is(":checked"))
-		{
-			console.log("3");
-			groupsFilled++;
-		}
-		
-		if($("input[name=disliked-known]").is(":checked")
-		|| $("input[name=disliked-look]").is(":checked")
-		|| $("input[name=disliked-features]").is(":checked")
-		|| $("input[name=disliked-other]").is(":checked"))
-		{
-			groupsFilled++;
-		}
-		
-		if(groupsFilled == 4)
+		if(groupsFilled == 2)
 		{
 			$("a#finish").removeClass("disabled");
 		}
