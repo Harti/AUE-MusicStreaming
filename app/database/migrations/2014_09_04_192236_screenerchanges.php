@@ -3,9 +3,9 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Streamerchanges extends Migration {
+class Screenerchanges extends Migration {
 
-	/**
+/**
 	 * Run the migrations.
 	 *
 	 * @return void
@@ -38,5 +38,4 @@ class Streamerchanges extends Migration {
 			$table->string('disliked_other')->nullable();
 		});
 	}
-
 }
