@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class StreamerChanges extends Migration {
+class Streamerchanges extends Migration {
 
 	/**
 	 * Run the migrations.
