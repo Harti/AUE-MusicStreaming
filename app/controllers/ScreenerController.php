@@ -18,11 +18,6 @@ class ScreenerController extends BaseController {
 		$attempt->preferred_look = Input::get("preferred-look");
 		$attempt->preferred_features = Input::get("preferred-features");
 		$attempt->preferred_other = (Input::get("preferred-other") ? Input::get("preferred-other-input") : "");
-		$attempt->disliked_service = Input::get("disliked-service");
-		$attempt->disliked_known = Input::get("disliked-known");
-		$attempt->disliked_look = Input::get("disliked-look");
-		$attempt->disliked_features = Input::get("disliked-features");
-		$attempt->disliked_other = (Input::get("disliked-other") ? Input::get("disliked-other-input") : "");
 		$attempt->save();
 		$attempt->completed_at = $attempt->updated_at;
 		$attempt->save();
@@ -30,16 +25,19 @@ class ScreenerController extends BaseController {
 		return View::make('screener.success')->with('attempt', $attempt);
 	}
 	
-	public function postVolunteer()
+	public function postGiveaway()
 	{
+		if(Input::get("attempt") == 0) 
+		{
+			return View::make('screener.complete');
+		}
+		
 		$attempt = ScreenerAttempt::find(Input::get("attempt"));
 		$volunteer = new Volunteer();
 		$volunteer->screener_attempt_id = $attempt->id;
 		
 		$validator = Validator::make(Input::all(), array(
-			'email' => 'email|required_without_all:skype,facebook',
-			'skype' => 'required_without_all:email,facebook',
-			'facebook' => 'required_without_all:email,skype'
+			'email' => 'email|required'
 		));
 		
 		if($validator->fails())
@@ -48,8 +46,6 @@ class ScreenerController extends BaseController {
 			return View::make('screener.success')->withErrors($validator)->with('attempt', $attempt);
 		}
 		$volunteer->email = Input::get('email');
-		$volunteer->skype = Input::get('skype');
-		$volunteer->facebook = Input::get('facebook');
 		$volunteer->save();
 		
 		Session::forget('error');
@@ -58,6 +54,6 @@ class ScreenerController extends BaseController {
 	
 	public function getSuccess()
 	{
-		return View::make('screener.success')->with('attempt', ScreenerAttempt::find(1));
+		return View::make('screener.success')->with('attempt', ScreenerAttempt::find(0));
 	}
 }

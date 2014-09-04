@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('Mutibook'),
+	'local' => array('Mutibook', 'Hartmut-PC'),
 
 ));
 
