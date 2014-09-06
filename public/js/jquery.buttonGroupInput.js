@@ -3,7 +3,7 @@
  * @email	hartgluecker@gmx.net 
  * 
  * This is a jQuery plugin to create Foundation button groups and make them behave like radio buttons. 
- * 
+ * Make sure to include the CSS file!
  * 
  * USAGE EXAMPLES:
  * 
