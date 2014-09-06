@@ -126,3 +126,15 @@ p.error {
 .bottomButton {
 	margin-top: 24px;
 }
+
+#imprint {
+	position: fixed;
+	bottom: 2px;
+	left: 8px;
+	font-size: 10px;
+}
+
+#imprintModal,
+#imprintModal h2 {
+	color: #444;
+}
