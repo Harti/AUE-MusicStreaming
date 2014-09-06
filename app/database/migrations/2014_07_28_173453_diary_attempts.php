@@ -12,7 +12,7 @@ class DiaryAttempts extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('diary_attempts', function($table)
+		Schema::create('diary_entry', function($table)
 		{
 			$table->increments('id');
 			$table->integer('user_id');
@@ -29,7 +29,7 @@ class DiaryAttempts extends Migration {
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('diary_attempts');
+		Schema::dropIfExists('diary_entry');
 	}
 
 }
