@@ -26,6 +26,8 @@
 		<br />
 		hartgluecker@gmx.net
 	</p>
+	<h2>Datenschutz</h2>
+	<p>Die E-Mail-Adressen werden nicht an Dritte weitergegeben und dienen - soweit sie nicht verschlüsselt in unserer Datenbank gespeichert werden - ausschließlich der Kontaktaufnahme im Falle eines Gewinns.</p>
 	<a class="close-reveal-modal">&#215;</a>
 </div>
 @include('layout.scriptinclude')	

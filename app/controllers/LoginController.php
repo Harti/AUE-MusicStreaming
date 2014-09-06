@@ -37,6 +37,11 @@ class LoginController extends BaseController {
 	
 	public function getRegister()
 	{
+		if(!Auth::guest())
+		{
+			return Redirect::to('/diary');
+		}
+		
 		return View::make('login.register');	
 	}
 	
