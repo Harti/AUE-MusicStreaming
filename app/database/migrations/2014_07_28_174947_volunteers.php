@@ -17,8 +17,6 @@ class Volunteers extends Migration {
 			$table->increments('id');
 			$table->integer('screener_attempt_id')->index();
 			$table->string('email')->nullable();
-			$table->string('skype')->nullable();
-			$table->string('facebook')->nullable();
 		});
 	}
 

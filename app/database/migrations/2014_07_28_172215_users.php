@@ -15,10 +15,11 @@ class Users extends Migration {
 		Schema::create('users', function($table)
 		{
 			$table->increments('id');
-			$table->string('name');
+			$table->string('email');
 			$table->string('password');
 			$table->string('gender');
 			$table->integer('age');
+			$table->string('remember_token');
 		});
 	}
 

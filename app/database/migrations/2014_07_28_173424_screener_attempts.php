@@ -23,11 +23,6 @@ class ScreenerAttempts extends Migration {
 			$table->string('preferred_look')->nullable();
 			$table->string('preferred_features')->nullable();
 			$table->string('preferred_other')->nullable();
-			$table->string('disliked_service')->nullable();
-			$table->string('disliked_known')->nullable();
-			$table->string('disliked_look')->nullable();
-			$table->string('disliked_features')->nullable();
-			$table->string('disliked_other')->nullable();
 		});
 	}
 

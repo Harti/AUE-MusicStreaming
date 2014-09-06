@@ -14,7 +14,7 @@ h2#love {
 	margin-top: 20px;
 }
 
-#content p {
+#content p.large {
 	line-height: 1.5em;
 	font-size: 15pt;
 }
@@ -80,7 +80,7 @@ label {
 	color: #fff;
 }
 
-section {
+section#step2 {
 	display: none;
 }
 
@@ -121,4 +121,8 @@ p.error {
 	color: #D00 !important;
 	font-weight: bold;
 	margin-bottom: 4px;
+}
+
+.bottomButton {
+	margin-top: 24px;
 }

@@ -18,7 +18,7 @@
 	<div class="small-12 columns">
 		<div class="text-center">
 			<h2>Vielen Dank erneut für deine Teilnahme!<br /><i class="fa fa-smile-o fa-3x"></i></h2>
-			<p>Die Auslosung findet am 22. September 2014 um ca. 16 Uhr statt. Falls du zu den Gewinnern der Gutscheine gehörst, melden wir uns über die E-Mail-Adresse bei dir!</p>
+			<p class="large">Die Auslosung findet am 22. September 2014 um ca. 16 Uhr statt. Falls du zu den Gewinnern der Gutscheine gehörst, melden wir uns über die E-Mail-Adresse bei dir!</p>
 		</div>
 	</div>
 </div>

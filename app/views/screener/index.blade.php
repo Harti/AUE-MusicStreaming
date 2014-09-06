@@ -18,8 +18,8 @@
 	<div class="row">
 		<div class="small-12 columns text-center">
 			<h2 id="love">Du <i class="fa fa-heart"></i> Musik?</h2>
-			<p>Sehr gut! Wir untersuchen im Rahmen eines Kurses der Universität Regensburg die Vor- und Nachteile von Musik-Streamingdiensten und benötigen hierzu <strong>deine Einschätzung</strong>.</p>   
-			<p>Es geht um folgende Dienste &ndash; du musst sie jedoch nicht kennen, um uns helfen zu können:</p>
+			<p class="large">Sehr gut! Wir untersuchen im Rahmen eines Kurses der Universität Regensburg die Vor- und Nachteile von Musik-Streamingdiensten und benötigen hierzu <strong>deine Einschätzung</strong>.</p>   
+			<p class="large">Es geht um folgende Dienste &ndash; du musst sie jedoch nicht kennen, um uns helfen zu können:</p>
 			<div class="row dienste">
 				<div class="small-12 medium-8 large-6 medium-centered columns">
 					<div class="row">
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 			<h3>Die Umfrage dauert nur ungefähr <strong>5-8 Minuten</strong> und sollte sehr entspannt sein.</h3>
-			<p class="show-for-small-only">Wenn du diese Seite mit deinem Smartphone besuchst, ist die Umfrage vermutlich geringfügig aufwändiger, da du deinen Browser mehrmals benötigst.</p>
+			<p class="show-for-small-only">Wenn du diese Seite mit deinem Smartphone besuchst, ist die Umfrage vermutlich geringfügig aufwändiger, da du deinen Browser benötigst.</p>
 			<hr />
 			<a class="radius large button expand forward"><i class="fa fa-arrow-circle-right"></i> Umfrage starten</a>
 		</div>
@@ -45,7 +45,7 @@
 	<div class="row">
 		<h4>Schritt 1 von 1</h4>
 		<h2>Sieh dir die Webseiten dieser beiden Streamingdienste an und erkundige nach ihrem Leistungsumfang:</h2>
-		<p>(Klicke auf einen Dienst, um zur dazugehörigen Webseite zu springen.)</p>
+		<p class="large">(Klicke auf einen Dienst, um zur dazugehörigen Webseite zu springen.)</p>
 		<div class="row dienste">
 			<div class="small-12 medium-8 large-6 medium-centered columns">
 				<div class="row">
