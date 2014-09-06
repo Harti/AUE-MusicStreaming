@@ -44,7 +44,7 @@ class LoginController extends BaseController {
 	{
 		$validator = Validator::make(
 			array(
-				'email' 				=> Hash::make(Input::get('email')),
+				'email' 				=> md5(Input::get('email')),
 				'password' 				=> Input::get('password')
 			),
 			array(
