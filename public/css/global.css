@@ -110,7 +110,20 @@ input.inline {
 
 #status.error {
 	color: #fff;
-	background-color: #A00;
+	background: rgba(170,0,0,.5);
+	box-shadow: 0px 0px 7px rgba(252,0,0,.6) inset;
+}
+
+#status.warning {
+	color: #fff;
+	background: rgba(247,199,5,.5);
+	box-shadow: 0px 0px 7px rgba(252,164,0,.6) inset;
+}
+
+#status.success {
+	color: #fff;
+	background: rgba(2,191,112,.5);
+	box-shadow: 0px 0px 7px rgba(5,247,146,.6) inset;
 }
 
 p.error:empty {

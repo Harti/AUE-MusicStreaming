@@ -64,6 +64,7 @@ class LoginController extends BaseController {
 		$user->password = Hash::make(Input::get('password'));
 		$user->save();
 		
+		Session::flash('success', 'Registrierung erfolgreich.');
 		return Redirect::to('/login');			
 	}
 	
