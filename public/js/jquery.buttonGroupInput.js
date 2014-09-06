@@ -2,18 +2,27 @@
  * @author 	Hartmut Glücker
  * @email	hartgluecker@gmx.net 
  * 
+ * This is a jQuery plugin to create Foundation button groups and make them behave like radio buttons. 
+ * 
+ * 
  * USAGE EXAMPLES:
  * 
+ * == markup:
+ * <div class="input-group" data-name="videoRating"></div>
+ * 
+ * 
+ * == script: * 
+ * // standard button amount is 5
+ * $(".input-group").buttonGroupInput({
+ *		buttonDefault: 3, // neutral
+ *		buttonCaption: ["<i class='fa fa-2x fa-frown-o'></i>", false, false, false, "<i class='fa fa-2x fa-smile-o'></i>"] // put a sad smiley face to where the 1 button is, and a happy one to where the 5 button is
+ *	});
+ * 
+ * // limit the amount of buttons
  * $(".input-group").buttonGroupInput({
  *		buttonText: ["Ja", "Nein"],
  *		buttonValue: [1, 0],
  *		buttonAmount: 2	
- *	});
- * 
- * 
- * $(".input-group").buttonGroupInput({
- *		buttonDefault: 3, // neutral
- *		buttonCaption: ["<i class='fa fa-2x fa-frown-o'></i>", false, false, false, "<i class='fa fa-2x fa-smile-o'></i>"] // put a sad smiley face to where the 1 button is, and a happy one to where the 5 button is
  *	});
  */
 
