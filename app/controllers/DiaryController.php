@@ -94,11 +94,13 @@ class DiaryController extends BaseController {
 		$entry->listening_duration					= Input::get('listening_duration');
 		$entry->recommendations_quality				= Input::get('recommendations_quality');
 		$entry->recommendations_comparison			= Input::get('recommendations_comparison');
-		$entry->most_listened						= Input::get('most_listened');  
+		$entry->most_listened						= (Input::get('most_listened') < 12 ?: Input::get('most-listened-other-input'));  
 		
 		$entry->completed_at = time();
 		$entry->day = strtotime(Input::get('day'));
-		$entry->save();    
+		$entry->save();  
+		
+		Session::flash('success', 'Tagebuch-Eintrag erfolgreich hinzugefügt.');  
     }
 
     public function postService()
