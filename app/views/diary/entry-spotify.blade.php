@@ -33,11 +33,7 @@
         <div class="row">
             <div class="medium-8 medium-centered columns">
                 <div class="question">
-                    <h3><em>Auf welche Art</em> hast du heute am meisten gehört?</h3>
-                   {{ Form::checkbox('listening-type', '1', (Input::old('listening-type') == '1'), array('id' => 'listening-type1')) }}<label for="listening-type1">a</label><br />
-                   {{ Form::checkbox('listening-type', '2', (Input::old('listening-type') == '2'), array('id' => 'listening-type2')) }}<label for="listening-type2">b</label><br />
-                   {{ Form::checkbox('listening-type', '3', (Input::old('listening-type') == '3'), array('id' => 'listening-type3')) }}<label for="listening-type3">c</label><br />
-                   {{ Form::checkbox('listening-type', '4', (Input::old('listening-type') == '4'), array('id' => 'listening-type4')) }}<label for="listening-type4">d</label><br />
+                    <h3><em>Auf welche Arten</em> hast du heute am meisten gehört? <small>(Gib ungefähre Einschätzungen an.)</small></h3>
                 </div>
             </div>
         </div>

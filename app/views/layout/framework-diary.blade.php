@@ -27,9 +27,6 @@
 					<a href="{{ URL::to('/diary') }}"><i class="fa fa-home fa-lg"></i> Übersicht</a>
 				</li>
 				<li class="divider"></li>
-				<li>
-					<a href="{{ URL::to('/diary/entry') }}"><i class="fa fa-pencil-square-o fa-lg"></i> Eintrag</a>
-				</li>
 			</ul>
 		</section>
 	</nav>

@@ -19,6 +19,7 @@ Route::group(array('prefix' => 'diary', 'before' => 'auth'), function()
 	Route::get('/', 			'DiaryController@getIndex');
     Route::get('/entry', 		'DiaryController@getEntry');
     Route::get('/entry/{id}', 	'DiaryController@editEntry');
+    Route::post('/entry/{id}', 	'DiaryController@postEntry');
 	
 	Route::post('/service', 		'DiaryController@postService');
 });

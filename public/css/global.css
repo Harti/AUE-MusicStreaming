@@ -155,3 +155,15 @@ p.error {
 .button.default {
 	background-color: #333;
 }
+
+#status a {
+	text-decoration: underline;
+	color: #fff !important;
+}
+#status a:hover {
+	text-decoration: none;
+}
+
+.datepicker.datepicker-dropdown.dropdown-menu {
+	max-width: 300px;
+}

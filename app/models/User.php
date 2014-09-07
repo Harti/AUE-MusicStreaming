@@ -13,14 +13,39 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	protected $table = 'users';
 
+	public function spotify()
+	{
+		return $this->service == 1;
+	}
+	
+	public function rdio()
+	{
+		return $this->service == 2;
+	}
 
     public function diaryEntries()
     {
-        return $this->hasMany('DiaryEntry');
+    	if($this->rdio())
+		{
+	        return $this->hasMany('RdioEntry')->orderBy('created_at');
+		}
+		else
+		{
+	        return $this->hasMany('SpotifyEntry')->orderBy('created_at');
+		}
     }
+	
+	public function hasUnfinishedEntries()
+	{
+		foreach($this->diaryEntries as $entry)
+		{
+			if(!$entry->finished()) return $entry;
+		}
+		return false;
+	}
 
 	public function serviceName()
 	{
-		return $this->service == 2 ? "rdio" : "Spotify";
+		return $this->rdio() ? "rdio" : "Spotify";
 	}
 }

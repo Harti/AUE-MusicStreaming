@@ -12,15 +12,7 @@ class DiaryAttempts extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('diary_entry', function($table)
-		{
-			$table->increments('id');
-			$table->integer('user_id');
-			$table->timestamp('day')->nullable();
-			$table->timestamp('created_at');
-			$table->timestamp('updated_at');
-			$table->timestamp('completed_at')->nullable();
-		});
+		
 	}
 
 	/**
