@@ -1,6 +1,6 @@
 $(function(){
     $(".input-group").buttonGroupInput({
-        buttonDefault: 3,
-        buttonCaption: ["Sehr schlecht", false, false, false, "Sehr gut"]
+    	buttonAmount: 7,
+        buttonCaption: ["<i class='fa fa-frown-o fa-2x'></i>", false, false, "<i class='fa fa-meh-o fa-2x'></i>", false, false, "<i class='fa fa-smile-o fa-2x'></i>"]
     });
 });

@@ -5,12 +5,12 @@
     <div class="medium-8 medium-centered columns">
         <h2>Tagebuch</h2>
         <div class="row">
-            @if (count($diarypages) == 0)
+            @if (count($diaryPages) == 0)
                 <div class="columns">
                     <p>Noch keine Einträge vorhanden</p>
                 </div>
             @else
-                @foreach ($diarypages as $page)
+                @foreach ($diaryPages as $page)
                     <div class="columns small-12 medium-6 large-4">
                         Tag #{{ $page->getDates()->day }};
                     </div>

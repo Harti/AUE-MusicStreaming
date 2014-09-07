@@ -19,6 +19,7 @@ class Users extends Migration {
 			$table->string('password');
 			$table->string('gender');
 			$table->integer('age');
+			$table->integer('service');
 			$table->string('remember_token');
 		});
 	}

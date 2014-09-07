@@ -16,6 +16,9 @@ Route::get('/logout', 'LoginController@getLogout');
 // Diary
 Route::group(array('prefix' => 'diary', 'before' => 'auth'), function()
 {
-	Route::get('/', 'DiaryController@getIndex');
-    Route::get('page', 'DiaryController@getDiaryPage');
+	Route::get('/', 			'DiaryController@getIndex');
+    Route::get('/entry', 		'DiaryController@getEntry');
+    Route::get('/entry/{id}', 	'DiaryController@editEntry');
+	
+	Route::post('/service', 		'DiaryController@postService');
 });

@@ -50,8 +50,8 @@ $.fn.buttonGroupInput = function(options)
 		
 		for(var i=0; i<opts.buttonAmount; i++)
 		{
-			$buttonGroup.append("<li><a class='" + (selectedButtonValue != opts.buttonValue[i] ? "secondary" : "") + " button' data-value='" + opts.buttonValue[i] + "'>" 
-								+ (opts.buttonText[i] ? opts.buttonText[i] : opts.buttonValue[i]) 
+			$buttonGroup.append("<li><a class='" + (selectedButtonValue != opts.buttonValue[i] ? "secondary" : "") + " button' data-value='" + (opts.buttonValue[i] || i+1) + "'>" 
+								+ (opts.buttonText[i] ? opts.buttonText[i] : opts.buttonValue[i] || i+1) 
 								+ "</a>"
 								+ (opts.buttonCaption[i] ? "<span>" + opts.buttonCaption[i] + "</span>" : "") 
 								+ "</li>");
