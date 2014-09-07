@@ -44,16 +44,25 @@ class DiaryController extends BaseController {
 	public function editEntry($id)
 	{
 		$user = Auth::user();
+		$entry = $user->getEntry($id);
 		
 		if($user->rdio())
 		{
-	        $entry = RdioEntry::find($id);
-			return View::make('diary.entry-rdio')->with('entry', $entry);
+			return View::make('diary.entry-rdio')->with(
+				array(
+					'entry' => $entry,
+					'user'  => $user
+				)
+			);
 		}
 		else 
 		{
-			$entry = SpotifyEntry::find($id);
-			return View::make('diary.entry-spotify')->with('entry', $entry);
+			return View::make('diary.entry-spotify')->with(
+				array(
+					'entry' => $entry,
+					'user'  => $user
+				)
+			);
 		}				
 	}
 

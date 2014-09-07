@@ -27,11 +27,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
     	if($this->rdio())
 		{
-	        return $this->hasMany('RdioEntry')->orderBy('created_at');
+	        return $this->hasMany('RdioEntry');
 		}
 		else
 		{
-	        return $this->hasMany('SpotifyEntry')->orderBy('created_at');
+	        return $this->hasMany('SpotifyEntry');
 		}
     }
 	
@@ -42,6 +42,23 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 			if(!$entry->finished()) return $entry;
 		}
 		return false;
+	}
+	
+	public function getEntry($entryID)
+	{		
+		if($this->rdio())
+		{
+			return RdioEntry::find($entryID);	
+		}
+		else
+		{
+			return SpotifyEntry::find($entryID);			
+		}
+	}
+	
+	public function mostRecentEntryBefore($entry)
+	{		
+		return $this->diaryEntries()->where('id', '<>', $entry->id)->orderBy('created_at', 'desc')->first();
 	}
 
 	public function serviceName()

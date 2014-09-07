@@ -7,7 +7,7 @@
         <div class="row">
         	<div class="small-12 columns" id="diaryOverview">
         	<?php $day = 0; ?>
-            @foreach ($user->diaryEntries as $entry)
+            @foreach ($user->diaryEntries()->orderBy('created_at')->get() as $entry)
             	<div class="day">
                     @if(!$entry->finished())
 	                    <a class="unfinished button radius" href="{{ URL::to('diary/entry/' . $entry->id) }}">

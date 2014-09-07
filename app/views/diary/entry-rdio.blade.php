@@ -6,6 +6,10 @@
 @stop
 
 @section('page-script')
+<script>
+var mostRecentEntryDate = false;
+mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->timestamp * 1000) }}"; // JS time (ms)
+</script>
 <script type="text/javascript" src="{{ URL::asset('js/jquery.buttonGroupInput.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/foundation-datepicker.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/diaryEntry.js') }}"></script>
@@ -25,7 +29,14 @@
             <div class="small-12 medium-8 medium-centered columns">
                 <div class="question">
                    <h4>Dieser Tagebuch-Eintrag betrifft <em>folgendes Datum</em>:</h4>
-                   {{ Form::text('day', ($entry->day ? $entry->day->format("d.m.Y") : date("d.m.Y")), array('class' => 'f-datepicker')) }}
+                   <div class="row collapse prefix">
+			        <div class="small-2 medium-1 columns">
+			          <a href="javascript:void(0);" id="pickDate" class="button prefix" title="Datum wählen"><i class="fa fa-calendar"></i></a>
+			        </div>
+			        <div class="small-10 medium-11 columns">
+	                   {{ Form::text('day', ($entry->day ? $entry->day->format("d.m.Y") : date("d.m.Y")), array('class' => 'f-datepicker', 'readonly' => 'true')) }}
+			        </div>
+			      </div>
                 </div>
             </div>
         </div>

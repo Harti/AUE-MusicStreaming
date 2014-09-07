@@ -68,9 +68,18 @@ $(function(){
 		'format': 'dd.mm.yyyy',
        	'weekStart': 1,
 		'onRender': function (date) {
-            return date.valueOf() > now.valueOf() ? 'disabled' : '';
+            if(date.valueOf() > now.valueOf()
+            || date.valueOf() < mostRecentEntryDate)
+            {
+	            return 'disabled';
+            }
        	}
 	});
 
+	$("#pickDate").on("click", function()
+	{
+		$(".f-datepicker").fdatepicker("show");	
+	});
+	
     checkForm();
 });
