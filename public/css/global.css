@@ -216,6 +216,16 @@ p.error {
 	font-weight: bold;
 }
 
+#diaryOverview .day small {
+	position: absolute;
+	top: -7px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 8pt;
+	color: #888;
+}
+
 #diaryOverview .day span.dayNumber {
 	font-size: 100px;
 }

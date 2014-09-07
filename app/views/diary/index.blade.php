@@ -17,7 +17,8 @@
 	                @else
 	                	<div class="finished">
 		                	<i class="fa fa-check fa-4x"></i>
-	                    	<span class="dayNumber">{{ ++$day }}</span>		                		
+	                    	<span class="dayNumber">{{ ++$day }}</span>
+	                    	<small>{{ $entry->day->formatLocalized('%a, %d.%m.%y') }}</small>		                		
 	                	</div>
                     @endif
                 </div>

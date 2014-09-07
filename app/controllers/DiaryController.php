@@ -26,6 +26,21 @@ class DiaryController extends BaseController {
 			return Redirect::to('/diary');
 		}
 		
+    	$entriesToday = $user->diaryEntries()->where('day', DB::raw('CURRENT_DATE'))->get();
+		
+		if(count($entriesToday) == 2)
+		{
+			Session::flash('warning', 'Dies ist dein dritter Eintrag heute. Bitte fälsche keine Daten. Falls du nur Daten nachträgst, sieh diesen Hinweis als gegenstandslos an.');
+		}		
+		else if(count($entriesToday) == 3)
+		{
+			Session::flash('warning', 'Dies ist dein vierter Eintrag heute. Bitte fälsche keine Daten. Falls du nur Daten nachträgst, sieh diesen Hinweis als gegenstandslos an.');
+		}
+		else if(count($entriesToday) == 4)
+		{
+			Session::flash('warning', 'Dies ist dein fünfter Eintrag heute. Bitte fälsche keine Daten. Falls du nur Daten nachträgst, sieh diesen Hinweis als gegenstandslos an.');
+		}
+		
     	if($user->rdio())
 		{
 	        $entry = new RdioEntry();
