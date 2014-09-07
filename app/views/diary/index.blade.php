@@ -5,38 +5,40 @@
     <div class="small-12 columns">
         <h2>Tagebuch</h2>
         <div class="row">
+        	<div class="small-12 columns" id="diaryOverview">
         	<?php $day = 0; ?>
             @foreach ($user->diaryEntries as $entry)
-                <div class="small-6 medium-4 columns">
-                	<div class="day">
-	                    @if(!$entry->finished())
-		                    <a class="unfinished" href="{{ URL::to('diary/entry/' . $entry->id) }}">
-		                    	Tag <span>{{ ++$day }}</span>
-		                    </a>
-		                @else
-		                	<div class="finished">
-		                    	Tag <span>{{ ++$day }}</span>		                		
-		                	</div>
-	                    @endif
-                    </div>
+            	<div class="day">
+                    @if(!$entry->finished())
+	                    <a class="unfinished button radius" href="{{ URL::to('diary/entry/' . $entry->id) }}">
+		                	<i class="fa fa-edit fa-3x"></i>
+	                    	<span class="dayNumber">{{ ++$day }}</span>
+	                    </a>
+	                @else
+	                	<div class="finished">
+		                	<i class="fa fa-check fa-4x"></i>
+	                    	<span class="dayNumber">{{ ++$day }}</span>		                		
+	                	</div>
+                    @endif
                 </div>
             @endforeach
             
-            @if(count($user->diaryEntries) < 5)
-				<div class="small-6 medium-4 columns">					
-                	<div class="day">
-	                    @if($user->hasUnfinishedEntries())
-		                	<div class="unfinished">
-		                    	Tag <span>{{ ++$day }}</span>		                		
-		                	</div>
-		                @else
-		                    <a href="{{ URL::to('diary/entry/') }}">
-		                    	Tag <span>{{ ++$day }}</span>
-		                    </a>
-	                    @endif
-                    </div>
-				</div>
+            @if(count($user->diaryEntries) < 5)				
+            	<div class="day">
+                    @if($user->hasUnfinishedEntries())
+	                    <a class="button secondary radius disabled" title="Schließe zunächst den vorherigen Eintrag ab!">
+	                    	<span>Neuer Eintrag</span>
+		                	<i class="fa fa-plus-square fa-5x"></i>
+	                    </a>
+	                @else
+	                    <a class="button success radius" href="{{ URL::to('diary/entry/') }}">
+	                    	<span>Neuer Eintrag</span>
+		                	<i class="fa fa-plus-square fa-5x"></i>
+	                    </a>
+                    @endif
+                </div>
             @endif
+            </div>
         </div>
     </div>
 </div>

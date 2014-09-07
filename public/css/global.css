@@ -165,5 +165,66 @@ p.error {
 }
 
 .datepicker.datepicker-dropdown.dropdown-menu {
-	max-width: 300px;
+	max-width: 250px;
+	max-height: 250px;
+}
+
+#diaryOverview .day {
+	width: 180px;
+	height: 180px;
+	background: rgba(0,0,0,.7);
+	position: relative;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+	border: 1px solid rgba(132,132,132,.7);
+}
+
+#diaryOverview .day > a,
+#diaryOverview .day > div {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	right: 12px;
+	bottom: 12px;
+	text-align: center;
+	line-height: normal;
+}
+
+#diaryOverview .day > .finished:before,
+#diaryOverview .day > .unfinished:before {
+	content: 'Tag';
+	display: block;
+	width: 100%;
+}
+
+#diaryOverview .day i.fa-edit,
+#diaryOverview .day i.fa-check {
+	position: absolute;
+	bottom: -10px;
+	right: -10px;
+}
+
+#diaryOverview .day i.fa-check {
+	color: #41CC72;
+}
+
+#diaryOverview .day .button,
+#diaryOverview .day div.finished {
+	margin: 0;
+	padding: 16px 4px 4px 4px;
+}
+
+#diaryOverview .day span {
+	display: block;
+	font-weight: bold;
+}
+
+#diaryOverview .day span.dayNumber {
+	font-size: 100px;
+}
+
+#diaryOverview .day a i.fa-plus-square {
+	margin-top: 16px;
+	display: block;
 }
