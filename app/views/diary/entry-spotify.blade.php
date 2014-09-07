@@ -49,7 +49,7 @@
             <div class="medium-8 medium-centered columns">
                 <div class="question">
                     <h3><em>Wie gut</em> hat der Streaming-Dienst dir Musik vorgeschlagen?</h3>
-                    <div class="input-group" data-name="recommendations-quality" data-value="{{ $entry->recommendations_quality }}"></div>
+                    <div class="input-group" data-name="recommendations_quality" data-value="{{ $entry->recommendations_quality }}"></div>
                 </div>
             </div>
         </div>
