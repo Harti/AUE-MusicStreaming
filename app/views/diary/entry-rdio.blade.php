@@ -81,7 +81,7 @@
                     {{ Form::radio('most_listened', '9', (Input::old('most_listened') == '9'), array('id' => 'most-listened9')) }}<label for="most-listened11">Dance / Club / Party</label><br />
                     {{ Form::radio('most_listened', '10', (Input::old('most_listened') == '10'), array('id' => 'most-listened10')) }}<label for="most-listened11">Jazz / Soul</label><br />
                     {{ Form::radio('most_listened', '11', (Input::old('most_listened') == '11'), array('id' => 'most-listened11')) }}<label for="most-listened11">Klassik</label><br />
-                    {{ Form::radio('most_listened', 'other', (!is_numeric(Input::old('most_listened'))), array('id' => 'most-listened12')) }}<label for="most-listened-12">anderes Genre:</label><input type="text" name="most-listened-other-input" class="inline" />
+                    {{ Form::radio('most_listened', '12', (!is_numeric(Input::old('most_listened'))), array('id' => 'most-listened12')) }}<label for="most-listened12">anderes Genre:</label><input type="text" name="most-listened-other-input" class="inline" />
                 </div>
             </div>
         </div>
