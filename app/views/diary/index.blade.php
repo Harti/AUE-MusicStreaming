@@ -2,7 +2,7 @@
 
 @section('page-content')
 <div class="row">
-    <div class="medium-8 medium-centered columns">
+    <div class="small-12 columns">
         <h2>Tagebuch</h2>
         <div class="row">
             @if (count($diaryPages) == 0)

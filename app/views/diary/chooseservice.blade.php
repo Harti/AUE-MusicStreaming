@@ -42,7 +42,16 @@
 				</div>
     		</div>
     	</div>
+    	<div class="question">
+    		<h3>Wie gut kennst du den Dienst bereits?</h3>    		
+           {{ Form::radio('familiarity', '0', true, array('id' => 'listening-duration0')) }}<label for="listening-duration0">keine Angabe</label><br />
+           {{ Form::radio('familiarity', '1', (Input::old('listening-duration') == '1'), array('id' => 'listening-duration1')) }}<label for="listening-duration1">gar nicht / Ich habe ihn nur im Test benutzt</label><br />
+           {{ Form::radio('familiarity', '2', (Input::old('listening-duration') == '2'), array('id' => 'listening-duration2')) }}<label for="listening-duration2">Ich habe ihn mal kurz benutzt (1-2 Mal)</label><br />
+           {{ Form::radio('familiarity', '3', (Input::old('listening-duration') == '3'), array('id' => 'listening-duration3')) }}<label for="listening-duration3">Ich habe ihn schon oft benutzt (3+ Mal)</label><br />
+           {{ Form::radio('familiarity', '4', (Input::old('listening-duration') == '4'), array('id' => 'listening-duration4')) }}<label for="listening-duration4">Ich nutze ihn im Alltag</label><br />
+    	</div>
     	{{ Form::hidden('service', '0') }}
+    	<hr />
     	<a id="finish" href="javascript:void(0);" class="large button expand disabled">Dienst auswählen</a>
     	{{ Form::close() }}
     </div>
