@@ -8,7 +8,7 @@
 	    		<h1><a href="{{ URL::to('/diary') }}"><img src="{{ URL::asset('img/ur.png') }}" height="32" width="70" /></a></h1>
 			</li>
 			<li class="toggle-topbar menu-icon">
-				<a href="#"><span>Menü</span></a>
+				<a href="javascript:void(0);"><span>Menü</span></a>
 			</li>
 		</ul>
 
