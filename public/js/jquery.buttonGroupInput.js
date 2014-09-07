@@ -62,6 +62,7 @@ $.fn.buttonGroupInput = function(options)
 			$buttonGroup.find("a").addClass("secondary");
 			$(this).removeClass("secondary");
 			$input.val($(this).data('value'));
+			$(this).trigger("harti.buttongroup.change", $input.val());
 		});
     });
 };
