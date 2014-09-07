@@ -26,7 +26,7 @@ class DiaryController extends BaseController {
 			return Redirect::to('/diary');
 		}
 		
-    	$entriesToday = $user->diaryEntries()->where('day', DB::raw('CURRENT_DATE'))->get();
+    	$entriesToday = $user->diaryEntries()->where('created_at', DB::raw('CURRENT_DATE'))->get();
 		
 		if(count($entriesToday) == 2)
 		{
