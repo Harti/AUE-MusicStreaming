@@ -101,6 +101,7 @@ class DiaryController extends BaseController {
 		$entry->save();  
 		
 		Session::flash('success', 'Tagebuch-Eintrag erfolgreich hinzugefügt.');  
+		return Redirect::to('/diary');
     }
 
     public function postService()
