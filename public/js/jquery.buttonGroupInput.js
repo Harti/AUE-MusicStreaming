@@ -39,16 +39,18 @@ $.fn.buttonGroupInput = function(options)
     $(this).each(function()
     {
 		var 
+		selectedButtonValue = $(this).data('value') || 0;
+		
+		var 
 		$buttonGroup 	= $("<ul class='button-group'></ul>"),
-		$input			= $("<input type='hidden' name='" + $(this).data('name') + "' value='" + parseInt(opts.buttonDefault+1) + "' />");
+		$input			= $("<input type='hidden' name='" + $(this).data('name') + "' value='" + parseInt(selectedButtonValue) + "' />");
 		
-		$(this).append($buttonGroup, $input);
-		
+		$(this).append($buttonGroup, $input);		
 		
 		
 		for(var i=0; i<opts.buttonAmount; i++)
 		{
-			$buttonGroup.append("<li><a class='" + (opts.buttonDefault != i+1 ? "secondary" : "") + " button' data-value='" + opts.buttonValue[i] + "'>" 
+			$buttonGroup.append("<li><a class='" + (selectedButtonValue != opts.buttonValue[i] ? "secondary" : "") + " button' data-value='" + opts.buttonValue[i] + "'>" 
 								+ (opts.buttonText[i] ? opts.buttonText[i] : opts.buttonValue[i]) 
 								+ "</a>"
 								+ (opts.buttonCaption[i] ? "<span>" + opts.buttonCaption[i] + "</span>" : "") 
