@@ -1,6 +1,13 @@
+.button-group li {
+	position: relative;
+	margin-bottom: 20px;
+}
+
 .button-group span {
 	display: block;
+	position: absolute;
+	bottom: -25px;
 	text-align: center;
 	color: #bbb;
-	margin-bottom: 5px;
+	width: 100%;
 }
