@@ -151,3 +151,7 @@ p.error {
 #imprintModal h2 {
 	color: #444;
 }
+
+.button.default {
+	background-color: #333;
+}

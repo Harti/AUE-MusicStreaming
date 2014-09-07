@@ -28,7 +28,7 @@
 				</li>
 				<li class="divider"></li>
 				<li>
-					<a href="{{ URL::to('/diary') }}"><i class="fa fa-pencil-square-o fa-lg"></i> Eintrag</a>
+					<a href="{{ URL::to('/diary/page') }}"><i class="fa fa-pencil-square-o fa-lg"></i> Eintrag</a>
 				</li>
 			</ul>
 		</section>
