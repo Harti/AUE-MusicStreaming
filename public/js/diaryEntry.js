@@ -11,13 +11,11 @@ $(function(){
             $("input[name=day]").val() !== null)
         {
             groupsFilled++;
-            console.log("date ok");
         }
 
         if($("input[name=listening_duration]").is(":checked"))
         {
             groupsFilled++;
-            console.log("listening duration ok");
         }
 
         // TODO Slider für Wiedergabemodi checken
@@ -25,20 +23,17 @@ $(function(){
         if(parseInt($("input[name=recommendations_quality]").val()) !== 0)
         {
             groupsFilled++;
-            console.log("recommendations quality ok");
         }
 
 
         if($("input[name=recommendations_comparison]").is(":checked"))
         {
             groupsFilled++;
-            console.log("recommendations comparison ok");
         }
 
         if($("input[name=most_listened]").is(":checked"))
         {
             groupsFilled++;
-            console.log("most listened ok");
         }
 
         // number of groups WITHOUT the sliders for testing purposes
@@ -62,12 +57,7 @@ $(function(){
 		
 	$("a#finish").on("click", submitForm);
     $("input").on("change", checkForm);
-    $(".button-group .button").on("click", function()
-    {
-        // nasty hack wait with the form check until after the jquery button group plugin
-        // has updated the input element
-        setTimeout(checkForm, 50);
-    });
+    $(document).on("harti.buttongroup.change", ".input-group", checkForm);
 	
 	
 	var nowTemp = new Date();
