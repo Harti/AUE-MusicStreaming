@@ -102,10 +102,10 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
             <div class="columns small-12 medium-8 medium-centered">
                 <div class="row">
                     <div class="small-12 medium-6 columns">
-                        <a class="large radius button expand default" id="cancel"><i class="fa fa-times"></i> Abbrechen</a>
+                        <a href="{{ URL::to('/diary') }}" class="large secondary radius button expand" id="cancel"><i class="fa fa-times"></i> Abbrechen</a>
                     </div>
                     <div class="small-12 medium-6 columns">
-                        <a class="large radius button expand" id="finish"><i class="fa fa-check-circle"></i> Eintrag speichern</a>
+                        <a href="javascript:void(0)" class="large radius button expand" id="finish"><i class="fa fa-check-circle"></i> Eintrag speichern</a>
                     </div>
                 </div>
             </div>

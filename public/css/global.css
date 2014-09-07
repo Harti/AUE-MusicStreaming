@@ -152,10 +152,6 @@ p.error {
 	color: #444;
 }
 
-.button.default {
-	background-color: #333;
-}
-
 #status a {
 	text-decoration: underline;
 	color: #fff !important;
