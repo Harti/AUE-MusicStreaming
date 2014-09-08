@@ -24,7 +24,7 @@
 			<ul class="left">
 				<li class="divider"></li>
 				<li>
-					<a href="{{ URL::to('/diary') }}"><i class="fa fa-home fa-lg"></i> Übersicht</a>
+					<a href="{{ URL::to('/diary') }}"><i class="fa fa-book fa-lg"></i> Tagebuch</a>
 				</li>
 				<li class="divider"></li>
 				<li>
