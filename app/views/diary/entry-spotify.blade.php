@@ -42,6 +42,85 @@
             <div class="medium-8 medium-centered columns">
                 <div class="question">
                     <h3><em>Auf welche Arten</em> hast du heute am meisten gehört? <small>(Gib ungefähre Einschätzungen an.)</small></h3>
+                    <div class="slider-group">
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Browse - Toplisten</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Browse - Neuheiten</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Browse - Genres &amp; Neuheiten</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Browse - Entdecken</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Eigene Playlist</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Fremde Playlist</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Radio</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

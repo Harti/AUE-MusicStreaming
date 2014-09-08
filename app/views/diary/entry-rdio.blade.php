@@ -60,47 +60,9 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
             <div class="small-12 medium-8 medium-centered columns">
                 <div class="question">
                     <h3><em>Auf welche Arten</em> hast du heute am meisten gehört? <small>(Gib ungefähre Einschätzungen an.)</small></h3>
-                    <div class="foundation-sliders-group" data-name="listening-feature">
-                        <div class="slider row">
-                            <span class="title small-12 medium-12 columns">Browse - Toplisten</span>
-                            <div class="medium-9 columns">
-                                <div class="range-slider" data-slider>
-                                    <span class="range-slider-handle" role="slider" tabindex="0"></span>
-                                    <span class="range-slider-active-segment"></span>
-                                </div>
-                            </div>
-                            <div class="medium-3 columns">
-                                <input class="slider-input" name="slider-input" type="text" value="0">
-                            </div>
-                        </div>
-                        <div class="slider row">
-                            <span class="title small-12 medium-12 columns">Browse - Neuheiten</span>
-                            <div class="medium-9 columns">
-                                <div class="range-slider" data-slider>
-                                    <span class="range-slider-handle" role="slider" tabindex="0"></span>
-                                    <span class="range-slider-active-segment"></span>
-                                </div>
-                            </div>
-                            <div class="medium-3 columns">
-                                <input class="slider-input" name="slider-input" type="text" value="0">
-                            </div>
-                        </div>
-                        <div class="slider row">
-                            <span class="title small-12 medium-12 columns">Browse - Neuheiten</span>
-                            <div class="medium-9 columns">
-                                <div class="range-slider" data-slider>
-                                    <span class="range-slider-handle" role="slider" tabindex="0"></span>
-                                    <span class="range-slider-active-segment"></span>
-                                </div>
-                            </div>
-                            <div class="medium-3 columns">
-                                <input class="slider-input" name="slider-input" type="text" value="0">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="jquery-ui-sliders-group">
+                    <div class="slider-group">
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Sparta</span>
+                            <span class="small-12 medium-12 columns">Trends</span>
                             <div class="medium-9 columns">
                                 <div class="jquery-slider">
                                     
@@ -111,7 +73,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Sparta</span>
+                            <span class="small-12 medium-12 columns">Neuerscheinungen</span>
                             <div class="medium-9 columns">
                                 <div class="jquery-slider">
                                     
@@ -122,7 +84,51 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Sparta</span>
+                            <span class="small-12 medium-12 columns">Durchsuchen</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Empfehlungen</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Eigene Playlisten</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Favorisierte Playlisten (anderer Nutzer)</span>
+                            <div class="medium-9 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="medium-3 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 medium-12 columns">Kanal</span>
                             <div class="medium-9 columns">
                                 <div class="jquery-slider">
                                     
