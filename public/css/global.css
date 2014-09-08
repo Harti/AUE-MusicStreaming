@@ -235,3 +235,7 @@ p.error {
 	margin-top: 16px;
 	display: block;
 }
+
+#diaryOverview {
+	margin-top: 25px;
+}

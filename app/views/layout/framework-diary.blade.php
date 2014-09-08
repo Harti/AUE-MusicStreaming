@@ -27,6 +27,10 @@
 					<a href="{{ URL::to('/diary') }}"><i class="fa fa-home fa-lg"></i> Übersicht</a>
 				</li>
 				<li class="divider"></li>
+				<li>
+					<a href="{{ URL::to('/diary/help') }}"><i class="fa fa-question-circle fa-lg"></i> Hilfe</a>
+				</li>
+				<li class="divider"></li>
 			</ul>
 		</section>
 	</nav>

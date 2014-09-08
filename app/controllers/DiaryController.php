@@ -13,6 +13,12 @@ class DiaryController extends BaseController {
 		
 		return View::make('diary.index', array('user' => $user));
 	}
+	public function getHelp()
+	{
+        $user = Auth::user();
+				
+		return View::make('diary.help', array('user' => $user));
+	}
 
     public function getEntry()
     {

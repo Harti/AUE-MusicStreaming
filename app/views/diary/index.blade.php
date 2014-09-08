@@ -3,7 +3,7 @@
 @section('page-content')
 <div class="row">
     <div class="small-12 columns">
-        <h2>Tagebuch</h2>
+        <h2><i class="fa fa-book fa-lg"></i> Tagebuch</h2>
         <div class="row">
         	<div class="small-12 columns" id="diaryOverview">
         	<?php $day = 0; ?>
@@ -40,6 +40,9 @@
                 </div>
             @endif
             </div>
+            @if(count($user->diaryEntries) == 0)	
+        		@include('help')
+        	@endif
         </div>
     </div>
 </div>
