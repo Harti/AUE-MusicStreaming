@@ -1,5 +1,7 @@
 @extends('layout.framework-diary')
 
+@section('page-title'){{ "Tagebuch-Eintrag" }}@stop
+
 @section('page-css')
 <link rel="stylesheet" href="{{ URL::asset('css/jquery.buttonGroupInput.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('css/foundation-datepicker.css') }}" />
@@ -7,7 +9,7 @@
 
 @section('page-script')
 <script>
-var mostRecentEntryDate = 1410040800000;
+var mostRecentEntryDate = 1410127200000;
 @if($user->mostRecentEntryBefore($entry))
 mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->timestamp * 1000) }}"; // JS time (ms)
 @endif

@@ -1,5 +1,7 @@
 @extends('layout.framework-diary')
 
+@section('page-title'){{ "Hilfe" }}@stop
+
 @section('page-content')
 <div class="row">	
     <div class="small-12 columns">
