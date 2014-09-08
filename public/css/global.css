@@ -251,6 +251,7 @@ p.error {
 	background-color: #9C004B;
 	box-shadow: inset 0px 0px 3px 2px #FC268D;
 	background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(0,0,0,.3) 15px, rgba(0,0,0,.1) 30px);
+	cursor: pointer;
 }
 
 .ui-slider-range {
