@@ -86,48 +86,48 @@ $(function(){
     /* code for slider group */
     var jquerySliderContainers = $(".slider-group .slider-container");
     function updateOtherSliders(sliderContainer, value){
-            var total = 0,
-                numActiveSliders = 0,
-                sliderInput = $(sliderContainer).find(".slider-input");
-                otherSliders = $(jquerySliderContainers).not(sliderContainer);
+        var total = 0,
+            numActiveSliders = 0,
+            sliderInput = $(sliderContainer).find(".slider-input");
+            otherSliders = $(jquerySliderContainers).not(sliderContainer);
 
-            $(sliderInput).val(value);
+        $(sliderInput).val(value);
 
-            otherSliders.each(function(){
-                var otherValue  = $(this).find(".jquery-slider").slider("value");
-                if(otherValue === 0){
-                    return;
-                } else {
-                    total += otherValue;
-                    numActiveSliders++;
-                }
-            });
+        otherSliders.each(function(){
+            var otherValue  = $(this).find(".jquery-slider").slider("value");
+            if(otherValue === 0){
+                return;
+            } else {
+                total += otherValue;
+                numActiveSliders++;
+            }
+        });
 
-            total += value;
+        total += value;
 
-            var delta = 100 - total;
+        var delta = 100 - total;
 
-            otherSliders.each(function(){
-                var currentValue = parseInt($(this).find(".jquery-slider").slider("value"));
-                var newValue = 0;
+        otherSliders.each(function(){
+            var currentValue = parseInt($(this).find(".jquery-slider").slider("value"));
+            var newValue = 0;
 
-                if(numActiveSliders === 0){
-                    newValue = currentValue + (delta/otherSliders.length);
-                } else {
-                    newValue = currentValue + (delta/numActiveSliders);
-                }
+            if(numActiveSliders === 0){
+                newValue = currentValue + (delta/otherSliders.length);
+            } else {
+                newValue = currentValue + (delta/numActiveSliders);
+            }
 
-                if (newValue < 0){
-                    newValue = 0;
-                } else if (newValue > 100){
-                    newValue = 100;
-                } else if (currentValue === 0){
-                    newValue = 0;
-                }
+            if (newValue < 0){
+                newValue = 0;
+            } else if (newValue > 100){
+                newValue = 100;
+            } else if (currentValue === 0){
+                newValue = 0;
+            }
 
-                $(this).find(".jquery-slider").slider('value', newValue);
-                $(this).find(".slider-input").val(newValue);
-            });
+            $(this).find(".jquery-slider").slider('value', newValue);
+            $(this).find(".slider-input").val(Math.round(newValue*10)/10);
+        });
     }
 
     jquerySliderContainers.each(function(){

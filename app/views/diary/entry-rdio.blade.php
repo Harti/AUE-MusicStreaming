@@ -62,79 +62,79 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                     <h3><em>Auf welche Arten</em> hast du heute am meisten gehört? <small>(Gib ungefähre Einschätzungen an.)</small></h3>
                     <div class="slider-group">
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Trends</span>
-                            <div class="medium-9 columns">
+                            <span class="small-12 columns">Trends</span>
+                            <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
-                            <div class="medium-3 columns">
+                            <div class="small-3 medium-2 columns">
                                 <input type="text" class="slider-input">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Neuerscheinungen</span>
-                            <div class="medium-9 columns">
+                            <span class="small-12 columns">Neuerscheinungen</span>
+                            <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
-                            <div class="medium-3 columns">
+                            <div class="small-3 medium-2 columns">
                                 <input type="text" class="slider-input">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Durchsuchen</span>
-                            <div class="medium-9 columns">
+                            <span class="small-12 columns">Durchsuchen</span>
+                            <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
-                            <div class="medium-3 columns">
+                            <div class="small-3 medium-2 columns">
                                 <input type="text" class="slider-input">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Empfehlungen</span>
-                            <div class="medium-9 columns">
+                            <span class="small-12 columns">Empfehlungen</span>
+                            <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
-                            <div class="medium-3 columns">
+                            <div class="small-3 medium-2 columns">
                                 <input type="text" class="slider-input">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Eigene Playlisten</span>
-                            <div class="medium-9 columns">
+                            <span class="small-12 columns">Eigene Playlisten</span>
+                            <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
-                            <div class="medium-3 columns">
+                            <div class="small-3 medium-2 columns">
                                 <input type="text" class="slider-input">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Favorisierte Playlisten (anderer Nutzer)</span>
-                            <div class="medium-9 columns">
+                            <span class="small-12 columns">Favorisierte Playlisten (anderer Nutzer)</span>
+                            <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
-                            <div class="medium-3 columns">
+                            <div class="small-3 medium-2 columns">
                                 <input type="text" class="slider-input">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 medium-12 columns">Kanal</span>
-                            <div class="medium-9 columns">
+                            <span class="small-12 columns">Kanal</span>
+                            <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
-                            <div class="medium-3 columns">
+                            <div class="small-3 medium-2 columns">
                                 <input type="text" class="slider-input">
                             </div>
                         </div>
