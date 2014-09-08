@@ -24,7 +24,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
     <div class="small-12 columns">
         <div class="row">
             <div class="small-12 medium-8 medium-centered columns">
-                <h2>Tagebuch-Eintrag</h2>
+                <h2><i class="fa fa-pencil fa-lg"></i> Tagebuch-Eintrag</h2>
             </div>
         </div>
         
