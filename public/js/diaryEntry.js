@@ -82,4 +82,140 @@ $(function(){
 	});
 	
     checkForm();
+
+//    ________                                    __             __      __                     
+//   |        \                                  |  \           |  \    |  \                    
+//   | $$$$$$$$______   __    __  _______    ____| $$  ______  _| $$_    \$$  ______   _______  
+//   | $$__   /      \ |  \  |  \|       \  /      $$ |      \|   $$ \  |  \ /      \ |       \ 
+//   | $$  \ |  $$$$$$\| $$  | $$| $$$$$$$\|  $$$$$$$  \$$$$$$\\$$$$$$  | $$|  $$$$$$\| $$$$$$$\
+//   | $$$$$ | $$  | $$| $$  | $$| $$  | $$| $$  | $$ /      $$ | $$ __ | $$| $$  | $$| $$  | $$
+//   | $$    | $$__/ $$| $$__/ $$| $$  | $$| $$__| $$|  $$$$$$$ | $$|  \| $$| $$__/ $$| $$  | $$
+//   | $$     \$$    $$ \$$    $$| $$  | $$ \$$    $$ \$$    $$  \$$  $$| $$ \$$    $$| $$  | $$
+//    \$$      \$$$$$$   \$$$$$$  \$$   \$$  \$$$$$$$  \$$$$$$$   \$$$$  \$$  \$$$$$$  \$$   \$$
+    /* var foundationSliders = $(".foundation-sliders-group .slider");
+    foundationSliders.each(function(index){
+        var slider = $(this),
+            sliderInput = slider.find(".slider-input"),
+            rangeSlider = slider.find(".range-slider");
+
+        var sliderListener = function(){
+            rangeSlider.on('change.fndtn.slider', function(event){
+                console.log('bacon');
+                var value = rangeSlider.attr('data-slider');
+                sliderInput.val(value);
+                updateOtherValues();
+            });
+        };
+
+        function updateOtherValues(){
+            var total = 0;
+            foundationSliders.each(function(){
+                total += parseInt($(this).find(".range-slider").attr("data-slider"));
+            });
+
+            var delta = 100 - total;
+            var otherSliders = foundationSliders.not(slider);
+            otherSliders.each(function(){
+                var otherSlider = $(this),
+                    value = parseInt(otherSlider.find(".range-slider").attr("data-slider"));
+
+
+                var newValue = value + (delta/otherSliders.length);
+
+                if(newValue < 0 || slider.value === 100){
+                    newValue = 0;
+                } else if (newValue > 100) {
+                    newValue = 100;
+                }
+
+                var otherRangeSlider = $(otherSlider).find(".range-slider");
+                // otherRangeSlider.off('change.fndtn.slider');
+                // otherRangeSlider.foundation('slider', 'set_value', newValue);
+                // otherRangeSlider.on('change.fndtn.slider', sliderListener);
+                $(otherSlider).find(".slider-input").val(newValue);
+            });
+        }
+
+        function registerSliderListener(){
+            rangeSlider.on('change.fndtn.slider', sliderListener);
+        }
+
+        sliderInput.on('change', function(event){
+            var value = parseInt($(sliderInput).val());
+            $(rangeSlider).foundation('slider', 'set_value', value);
+
+            updateOtherValues();
+        });
+
+        registerSliderListener();
+    }); */
+
+//              ______                                          
+//             /      \                                         
+//         __ |  $$$$$$\ __    __   ______    ______   __    __ 
+//        |  \| $$  | $$|  \  |  \ /      \  /      \ |  \  |  \
+//         \$$| $$  | $$| $$  | $$|  $$$$$$\|  $$$$$$\| $$  | $$
+//        |  \| $$ _| $$| $$  | $$| $$    $$| $$   \$$| $$  | $$
+//        | $$| $$/ \ $$| $$__/ $$| $$$$$$$$| $$      | $$__/ $$
+//        | $$ \$$ $$ $$ \$$    $$ \$$     \| $$       \$$    $$
+//   __   | $$  \$$$$$$\  \$$$$$$   \$$$$$$$ \$$       _\$$$$$$$
+//  |  \__/ $$      \$$$                              |  \__| $$
+//   \$$    $$                                         \$$    $$
+//    \$$$$$$                                           \$$$$$$ 
+
+
+    var jquerySliderContainers = $(".jquery-ui-sliders-group .slider-container");
+    jquerySliderContainers.each(function(){
+        var sliderContainer = $(this),
+            slider = $(sliderContainer).find(".jquery-slider"),
+            sliderInput = $(sliderContainer).find(".slider-input");
+
+        function updateOtherValues(){
+
+        }
+
+        // init jquery ui sliders
+        $(slider).slider({
+            range: "max",
+            min: 0,
+            max: 100,
+            orientation: "horizontal",
+            animate: 0,
+            slide: function(event, ui){
+                var value = $(this).slider("value"),
+                    total = 0,
+                    otherSliders = $(jquerySliderContainers).not(sliderContainer);
+
+                $(sliderInput).val(value);
+
+                otherSliders.each(function(){
+                    var otherValue  = $(this).find(".jquery-slider").slider("value");
+                    total += otherValue;
+                });
+
+                total += value;
+
+                var delta = 100 - total;
+
+                otherSliders.each(function(){
+                    var value = parseInt($(this).find(".jquery-slider").slider("value")),
+                        newValue = value + (delta/jquerySliderContainers.length);
+
+                    if (newValue < 0 || ui.value == 100){
+                        newValue = 0;
+                    } else if (newValue > 100){
+                        newValue = 100;
+                    }
+
+                    $(this).find(".jquery-slider").slider('value', newValue);
+                    $(this).find(".slider-input").val(newValue);
+                });
+            }   
+        });
+
+        $(sliderInput).on('change', function(){
+            var value = $(this).val();
+            $(slider).slider("value", value);
+        });
+    });
 });
