@@ -99,7 +99,6 @@ class DiaryController extends BaseController {
 			$entry->listened_to_news 				= Input::get('listened_to_news');
 			$entry->listened_to_browse				= Input::get('listened_to_browse');
 			$entry->listened_to_recommendations		= Input::get('listened_to_recommendations');
-			$entry->listened_to_people				= Input::get('listened_to_people');
 			$entry->listened_to_own_playlist		= Input::get('listened_to_own_playlist');
 			$entry->listened_to_favorite_playlist 	= Input::get('listened_to_favorite_playlist');
 			$entry->listened_to_searched_songs		= Input::get('listened_to_searched_songs');
@@ -114,7 +113,6 @@ class DiaryController extends BaseController {
 			$entry->listened_to_browse_news			= Input::get('listened_to_browse_news');
 			$entry->listened_to_browse_moods		= Input::get('listened_to_browse_moods');
 			$entry->listened_to_browse_discover		= Input::get('listened_to_browse_discover');
-			$entry->listened_to_follow				= Input::get('listened_to_follow');
 			$entry->listened_to_own_playlist		= Input::get('listened_to_own_playlist');
 			$entry->listened_to_other_playlist		= Input::get('listened_to_other_playlist');
 			$entry->listened_to_searched_songs		= Input::get('listened_to_searched_songs');

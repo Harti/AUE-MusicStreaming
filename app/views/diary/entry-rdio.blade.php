@@ -69,7 +69,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_trends" id="listened_to_trends">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -80,7 +80,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_news" id="listened_to_news">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -91,7 +91,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_browse" id="listened_to_browse">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -102,7 +102,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_recommendations" id="listened_to_recommendations">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -113,29 +113,51 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_own_playlist" id="listened_to_own_playlist">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 columns">Favorisierte Playlisten (anderer Nutzer)</span>
+                            <span class="small-12 columns">Favorisierte Playlisten anderer Nutzer</span>
                             <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_favorite_playlist" id="listened_to_favorite_playlist">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 columns">Kanal</span>
+                            <span class="small-12 columns">Gesuchte Titel, Interpreten oder Alben</span>
                             <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_searched_songs" id="listened_to_searched_songs">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Kanal zu Interpret, Titel, Album oder Genre</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input" name="listened_to_channel" id="listened_to_channel">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Eigener Kanal</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input" name="listened_to_custom_channel" id="listened_to_custom_channel">
                             </div>
                         </div>
                     </div>

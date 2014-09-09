@@ -69,7 +69,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_browse_top_lists" id="listened_to_browse_top_lists">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -80,7 +80,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_browse_news" id="listened_to_browse_news">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -91,7 +91,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_browse_moods" id="listened_to_browse_moods">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -102,7 +102,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_browse_discover" id="listened_to_browse_discover">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -113,18 +113,29 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_own_playlist" id="listened_to_own_playlist">
                             </div>
                         </div>
                         <div class="slider-container row">
-                            <span class="small-12 columns">Gespeicherte Playlisten (anderer Nutzer)</span>
+                            <span class="small-12 columns">Playlisten anderer Nutzer</span>
                             <div class="small-9 medium-10 columns">
                                 <div class="jquery-slider">
                                     
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_other_playlist" id="listened_to_other_playlist">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Gesuchte Titel, Interpreten oder Alben</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input" name="listened_to_searched_songs" id="listened_to_searched_songs">
                             </div>
                         </div>
                         <div class="slider-container row">
@@ -135,7 +146,7 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
                                 </div>
                             </div>
                             <div class="small-3 medium-2 columns">
-                                <input type="text" class="slider-input">
+                                <input type="text" class="slider-input" name="listened_to_radio" id="listened_to_radio">
                             </div>
                         </div>
                     </div>
