@@ -168,12 +168,16 @@ $(function(){
     jquerySliderContainers.each(function(){
         var sliderContainer = $(this),
             slider = $(sliderContainer).find(".jquery-slider"),
-            sliderInput = $(sliderContainer).find(".slider-input");
+            sliderInput = $(sliderContainer).find(".slider-input"),
+            maxValue = 100,
+            initialValue = maxValue/jquerySliderContainers.length;
 
+        // setup sliders
         $(slider).slider({
             range: "max",
             min: 0,
-            max: 100,
+            max: maxValue,
+            value: initialValue,
             orientation: "horizontal",
             animate: 0,
             slide: function(event, ui){
@@ -181,11 +185,13 @@ $(function(){
             }
         });
 
+        // setup slider input
         $(sliderInput).on('change', function(){
             var value = parseInt($(this).val());
             $(slider).slider("value", value);
 
             updateOtherSliders(sliderContainer, value);
         });
+        $(sliderInput).val(Math.round(initialValue*10)/10);
     });
 });
