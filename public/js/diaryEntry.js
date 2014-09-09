@@ -173,7 +173,6 @@ $(function(){
         jquerySliderContainers.each(function(){
             sum += parseFloat($(this).find(".slider-input").val());
         });
-        console.log("Values sum: " + sum);
     }
 
     jquerySliderContainers.each(function(){

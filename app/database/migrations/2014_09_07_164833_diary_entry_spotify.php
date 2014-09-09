@@ -27,7 +27,6 @@ class DiaryEntrySpotify extends Migration {
 			$table->integer('listened_to_browse_news')->default(0);
 			$table->integer('listened_to_browse_moods')->default(0);
 			$table->integer('listened_to_browse_discover')->default(0);
-			$table->integer('listened_to_follow')->default(0);
 			$table->integer('listened_to_own_playlist')->default(0);
 			$table->integer('listened_to_other_playlist')->default(0);
 			$table->integer('listened_to_searched_songs')->default(0);
