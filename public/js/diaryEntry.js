@@ -108,15 +108,26 @@ $(function(){
         function math_shit(values, min, delta, ignore_indices){
             var new_delta = 0;
             var new_ignore_indices = [];
+            var min_ignore_indices = [];
+
+            if(!ignore_indices){
+                ignore_indices = [];
+            }
 
             // Check for sliders that are 0 and ignore them
             for(var i = 0; i < values.length; i++){
                 if(values[i] === min && ignore_indices.indexOf(i) === -1){
-                    ignore_indices.push(i);
+                    min_ignore_indices.push(i);
                 }
             }
 
-            var numActiveIndices = values.length - ignore_indices.length;
+            // calculate number of active indices, if no index would be active, make all indices active
+            var numActiveIndices = values.length - (ignore_indices.length + min_ignore_indices.length);
+            if(numActiveIndices > 0){
+                ignore_indices = ignore_indices.concat(min_ignore_indices);
+            } else {
+                numActiveIndices = values.length - ignore_indices.length;
+            }
 
             // Calculate the new values for all active sliders
             // If the value of a slider falls below 0, add it to the ignore list
@@ -150,7 +161,7 @@ $(function(){
             sliderValues.push(parseInt($(this).find(".jquery-slider").slider("value")));
         });
 
-        math_shit(sliderValues, 0, delta, []);
+        math_shit(sliderValues, 0, delta);
 
         otherSliders.each(function(index){
             var newValue = sliderValues[index];
