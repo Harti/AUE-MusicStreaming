@@ -27,7 +27,6 @@ class DiaryEntryRdio extends Migration {
 			$table->integer('listened_to_news')->default(0);
 			$table->integer('listened_to_browse')->default(0);
 			$table->integer('listened_to_recommendations')->default(0);
-			$table->integer('listened_to_people')->default(0);
 			$table->integer('listened_to_own_playlist')->default(0);
 			$table->integer('listened_to_favorite_playlist')->default(0);
 			$table->integer('listened_to_searched_songs')->default(0);
