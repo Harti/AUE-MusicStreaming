@@ -267,3 +267,7 @@ p.error {
 	outline: 0;
 	margin-top: -2px;
 }
+
+textarea {
+	resize: vertical;
+}

@@ -192,6 +192,14 @@ mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->
             </div>
         </div>
         <div class="row">
+            <div class="small-12 medium-8 medium-centered columns">
+                <div class="question">
+                    <h3>Hast du irgendwelche Anmerkungen oder Fragen?</h3>
+                    <textarea name="free_notes"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="columns small-12 medium-8 medium-centered">
                 <div class="row">
                     <div class="small-12 medium-6 columns">

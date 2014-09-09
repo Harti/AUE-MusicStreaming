@@ -34,6 +34,7 @@ class DiaryEntrySpotify extends Migration {
 			
 			$table->integer('recommendations_quality')->default(0);
 			$table->integer('recommendations_comparison')->default(0);
+			$table->text('free_notes')->nullable();
 			$table->string('most_listened');
 		});
 	}
