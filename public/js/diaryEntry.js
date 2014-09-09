@@ -82,4 +82,127 @@ $(function(){
 	});
 	
     checkForm();
+
+    /* code for slider group */
+    var jquerySliderContainers = $(".slider-group .slider-container");
+    function updateOtherSliders(sliderContainer, value){
+        var total = 0,
+            sliderInput = $(sliderContainer).find(".slider-input");
+            otherSliders = $(jquerySliderContainers).not(sliderContainer);
+
+        $(sliderInput).val(value);
+
+        otherSliders.each(function(){
+            var otherValue  = $(this).find(".jquery-slider").slider("value");
+            if(otherValue === 0){
+                return;
+            } else {
+                total += otherValue;
+            }
+        });
+
+        total += value;
+
+        var delta = 100 - total;
+
+        function math_shit(values, min, delta, ignore_indices){
+            var new_delta = 0;
+            var new_ignore_indices = [];
+            var min_ignore_indices = [];
+
+            if(!ignore_indices){
+                ignore_indices = [];
+            }
+
+            // Check for sliders that are 0 and ignore them
+            for(var i = 0; i < values.length; i++){
+                if(values[i] === min && ignore_indices.indexOf(i) === -1){
+                    min_ignore_indices.push(i);
+                }
+            }
+
+            // calculate number of active indices, if no index would be active, make all indices active
+            var numActiveIndices = values.length - (ignore_indices.length + min_ignore_indices.length);
+            if(numActiveIndices > 0){
+                ignore_indices = ignore_indices.concat(min_ignore_indices);
+            } else {
+                numActiveIndices = values.length - ignore_indices.length;
+            }
+
+            // Calculate the new values for all active sliders
+            // If the value of a slider falls below 0, add it to the ignore list
+            // and add its negative value to the new delta
+            for(var idx = 0; idx < values.length; idx++){
+
+                // skip the ignored sliders
+                if(ignore_indices.indexOf(idx) > -1){
+                    continue;
+                }
+
+                values[idx] += delta/numActiveIndices;
+
+                // check if value would be below zero
+                if (values[idx] < min){
+                    new_delta += values[idx];
+                    values[idx] = min;
+                }
+            }
+
+            // If there is a new delta, do the same thing again, with 
+            // the rest of the active sliders, excluding the newly added
+            // ignored sliders
+            if(new_delta !== 0){
+                math_shit(values, min, new_delta, ignore_indices);
+            }
+        }
+
+        var sliderValues = [];
+        otherSliders.each(function(){
+            sliderValues.push(parseInt($(this).find(".jquery-slider").slider("value")));
+        });
+
+        math_shit(sliderValues, 0, delta);
+
+        otherSliders.each(function(index){
+            var newValue = sliderValues[index];
+            $(this).find(".jquery-slider").slider('value', newValue);
+            $(this).find(".slider-input").val(Math.round(newValue*10)/10);
+        });
+
+        var sum = 0;
+        jquerySliderContainers.each(function(){
+            sum += parseFloat($(this).find(".slider-input").val());
+        });
+        console.log("Values sum: " + sum);
+    }
+
+    jquerySliderContainers.each(function(){
+        var sliderContainer = $(this),
+            slider = $(sliderContainer).find(".jquery-slider"),
+            sliderInput = $(sliderContainer).find(".slider-input"),
+            maxValue = 100,
+            initialValue = maxValue/jquerySliderContainers.length;
+
+        // setup sliders
+        $(slider).slider({
+            range: "max",
+            min: 0,
+            max: maxValue,
+            value: initialValue,
+            orientation: "horizontal",
+            animate: 0,
+            slide: function(event, ui){
+                updateOtherSliders(sliderContainer, ui.value);
+            }
+        });
+
+        // setup slider input
+        $(sliderInput).on('change', function(){
+            var value = parseInt($(this).val());
+            $(slider).slider("value", value);
+
+            updateOtherSliders(sliderContainer, value);
+        });
+        $(sliderInput).val(Math.round(initialValue*10)/10);
+    });
 });

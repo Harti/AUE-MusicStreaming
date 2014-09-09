@@ -1,11 +1,22 @@
 @extends('layout.framework-diary')
 
+@section('page-title'){{ "Tagebuch-Eintrag" }}@stop
+
 @section('page-css')
 <link rel="stylesheet" href="{{ URL::asset('css/jquery.buttonGroupInput.css') }}" />
+<link rel="stylesheet" href="{{ URL::asset('css/foundation-datepicker.css') }}" />
 @stop
 
 @section('page-script')
+<script>
+var mostRecentEntryDate = 1410127200000;
+@if($user->mostRecentEntryBefore($entry))
+mostRecentEntryDate = "{{ ($user->mostRecentEntryBefore($entry)->day->addDay()->timestamp * 1000) }}"; // JS time (ms)
+@endif
+</script>
 <script type="text/javascript" src="{{ URL::asset('js/jquery.buttonGroupInput.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/foundation-datepicker.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/foundation/foundation.slider.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/diaryEntry.js') }}"></script>
 @stop
 
@@ -13,8 +24,8 @@
 <div class="row">
     <div class="small-12 columns">
         <div class="row">
-            <div class="medium-8 medium-centered columns">
-                <h2>Tagebucheintrag</h2>
+            <div class="small-12 medium-8 medium-centered columns">
+                <h2><i class="fa fa-pencil fa-lg"></i> Tagebuch-Eintrag</h2>
             </div>
         </div>
         
@@ -23,12 +34,19 @@
             <div class="small-12 medium-8 medium-centered columns">
                 <div class="question">
                    <h4>Dieser Tagebuch-Eintrag betrifft <em>folgendes Datum</em>:</h4>
-                   {{ Form::text('day', ($entry->day ? $entry->day->format("d.m.Y") : date("d.m.Y")), array('class' => 'f-datepicker')) }}
+                   <div class="row collapse prefix">
+                    <div class="small-2 medium-1 columns">
+                      <a href="javascript:void(0);" id="pickDate" class="button prefix" title="Datum wählen"><i class="fa fa-calendar"></i></a>
+                    </div>
+                    <div class="small-10 medium-11 columns">
+                       {{ Form::text('day', ($entry->day ? $entry->day->format("d.m.Y") : date("d.m.Y")), array('class' => 'f-datepicker', 'readonly' => 'true')) }}
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="medium-8 medium-centered columns">
+            <div class="small-12 medium-8 medium-centered columns">
                 <div class="question">
                    <h3><em>Wie lange</em> hast du heute gehört?</h3>
                    {{ Form::radio('listening_duration', '1', (Input::old('listening_duration') == '1'), array('id' => 'listening-duration1')) }}<label for="listening-duration1">1 Stunde oder weniger</label><br />
@@ -39,14 +57,93 @@
             </div>
         </div>
         <div class="row">
-            <div class="medium-8 medium-centered columns">
+            <div class="small-12 medium-8 medium-centered columns">
                 <div class="question">
                     <h3><em>Auf welche Arten</em> hast du heute am meisten gehört? <small>(Gib ungefähre Einschätzungen an.)</small></h3>
+                    <div class="slider-group">
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Browse - Toplisten</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Browse - Neuheiten</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Browse - Genres &amp; Stimmungen</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Browse - Entdecken</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Eigene Playlisten</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Gespeicherte Playlisten (anderer Nutzer)</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                        <div class="slider-container row">
+                            <span class="small-12 columns">Radio</span>
+                            <div class="small-9 medium-10 columns">
+                                <div class="jquery-slider">
+                                    
+                                </div>
+                            </div>
+                            <div class="small-3 medium-2 columns">
+                                <input type="text" class="slider-input">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="medium-8 medium-centered columns">
+            <div class="small-12 medium-8 medium-centered columns">
                 <div class="question">
                     <h3><em>Wie gut</em> hat der Streaming-Dienst dir Musik vorgeschlagen?</h3>
                     <div class="input-group" data-name="recommendations_quality" data-value="{{ $entry->recommendations_quality }}"></div>
@@ -54,7 +151,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="medium-8 medium-centered columns">
+            <div class="small-12 medium-8 medium-centered columns">
                 <div class="question">
                     <h3>Waren die Vorschläge <em>besser als gestern</em>?</h3>
                     {{ Form::radio('recommendations_comparison', '1', (Input::old('recommendations_comparison') == '1'), array('id' => 'recommendations-comparison1')) }}<label for="recommendations-comparison1">besser</label><br />
@@ -65,7 +162,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="medium-8 medium-centered columns">
+            <div class="small-12 medium-8 medium-centered columns">
                 <div class="question">
                     <h3>Welches Genre hast du dir heute am meisten angehört?</h3>
                     {{ Form::radio('most_listened', '1', (Input::old('most_listened') == '1'), array('id' => 'most-listened1')) }}<label for="most-listened1">Pop / Charts</label><br />
@@ -76,10 +173,10 @@
                     {{ Form::radio('most_listened', '6', (Input::old('most_listened') == '6'), array('id' => 'most-listened6')) }}<label for="most-listened6">Indie / Alternative</label><br />
                     {{ Form::radio('most_listened', '7', (Input::old('most_listened') == '7'), array('id' => 'most-listened7')) }}<label for="most-listened7">Electro</label><br />
                     {{ Form::radio('most_listened', '8', (Input::old('most_listened') == '8'), array('id' => 'most-listened8')) }}<label for="most-listened8">Dubstep</label><br />
-                    {{ Form::radio('most_listened', '9', (Input::old('most_listened') == '9'), array('id' => 'most-listened9')) }}<label for="most-listened11">Dance / Club / Party</label><br />
-                    {{ Form::radio('most_listened', '10', (Input::old('most_listened') == '10'), array('id' => 'most-listened10')) }}<label for="most-listened11">Jazz / Soul</label><br />
+                    {{ Form::radio('most_listened', '9', (Input::old('most_listened') == '9'), array('id' => 'most-listened9')) }}<label for="most-listened9">Dance / Club / Party</label><br />
+                    {{ Form::radio('most_listened', '10', (Input::old('most_listened') == '10'), array('id' => 'most-listened10')) }}<label for="most-listened10">Jazz / Soul</label><br />
                     {{ Form::radio('most_listened', '11', (Input::old('most_listened') == '11'), array('id' => 'most-listened11')) }}<label for="most-listened11">Klassik</label><br />
-                    {{ Form::radio('most_listened', 'other', (!is_numeric(Input::old('most_listened'))), array('id' => 'most-listened12')) }}<label for="most-listened-12">anderes Genre:</label><input type="text" name="most-listened-other-input" class="inline" />
+                    {{ Form::radio('most_listened', '12', (!is_numeric(Input::old('most_listened'))), array('id' => 'most-listened12')) }}<label for="most-listened12">anderes Genre:</label><input type="text" name="most-listened-other-input" class="inline" />
                 </div>
             </div>
         </div>
@@ -87,10 +184,10 @@
             <div class="columns small-12 medium-8 medium-centered">
                 <div class="row">
                     <div class="small-12 medium-6 columns">
-                        <a class="large radius button expand default" id="cancel"><i class="fa fa-times"></i> Abbrechen</a>
+                        <a href="{{ URL::to('/diary') }}" class="large secondary radius button expand" id="cancel"><i class="fa fa-times"></i> Abbrechen</a>
                     </div>
                     <div class="small-12 medium-6 columns">
-                        <a class="large radius button expand disabled" id="finish"><i class="fa fa-check-circle"></i> Eintrag speichern</a>
+                        <a href="javascript:void(0)" class="large radius button expand" id="finish"><i class="fa fa-check-circle"></i> Eintrag speichern</a>
                     </div>
                 </div>
             </div>
