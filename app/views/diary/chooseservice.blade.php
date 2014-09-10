@@ -43,7 +43,7 @@
     		</div>
     	</div>
     	<div class="question">
-    		<h2>Wie gut kennst du den Dienst bereits?</h2>    		
+    		<h3>Wie gut kennst du den Dienst bereits?</h3>    		
            {{ Form::radio('familiarity', '0', true, array('id' => 'listening-duration0')) }}<label for="listening-duration0">keine Angabe</label><br />
            {{ Form::radio('familiarity', '1', (Input::old('listening-duration') == '1'), array('id' => 'listening-duration1')) }}<label for="listening-duration1">gar nicht / Ich habe ihn nur im Test benutzt</label><br />
            {{ Form::radio('familiarity', '2', (Input::old('listening-duration') == '2'), array('id' => 'listening-duration2')) }}<label for="listening-duration2">Ich habe ihn mal kurz benutzt (1-2 Mal)</label><br />
@@ -51,17 +51,21 @@
            {{ Form::radio('familiarity', '4', (Input::old('listening-duration') == '4'), array('id' => 'listening-duration4')) }}<label for="listening-duration4">Ich nutze ihn im Alltag</label><br />
     	</div>
         <div class="question">
-            <h2>Alter</h2>
-            <div class="row">
-                <div class="small-12 medium-3 columns">
-                    {{ Form::input('number', 'age')}}
-                </div>
+            <div class="row" data-equalizer-watch>
+            	<div class="small-12 medium-6 columns">
+           			<h3>Alter</h3>
+           			<div class="row">
+           				<div class="small-12 medium-6 columns">
+		                    {{ Form::input('number', 'age')}}
+           				</div>
+           			</div>
+            	</div>
+            	<div class="small-12 medium-6 columns">
+            		<h3>Geschlecht</h3>
+		            {{ Form::radio('gender', 'männlich', false, array('id' => 'gender0')) }} <label for="gender0">männlich</label><br />
+		            {{ Form::radio('gender', 'weiblich', false, array('id' => 'gender1')) }} <label for="gender1">weiblich</label>
+	            </div>
             </div>
-        </div>
-        <div class="question">
-            <h2>Geschlecht</h2>
-            {{ Form::radio('gender', 'männlich', false, array('id' => 'gender0')) }} <label for="gender0">männlich</label><br />
-            {{ Form::radio('gender', 'weiblich', false, array('id' => 'gender1')) }} <label for="gender1">weiblich</label>
         </div>
         <div class="question">
             <h2>Wie wir mit deinen Daten umgehen:</h2>
@@ -117,10 +121,6 @@ $(function()
         }
     }
 
-    $("input[name=age]").on('keypress', function(){
-
-    })
-
     $("form").on("submit", function(e)
     {
         if(!checkForm()) 
@@ -130,10 +130,9 @@ $(function()
         }
     });
 
-    $("input").on('change', function()
-    {
-        checkForm();
-    });
+    $("input").on('change', checkForm);
+
+    $("input[name=age]").on('keyup', checkForm);
     
     $("a#finish").on("click", submitForm);
     
