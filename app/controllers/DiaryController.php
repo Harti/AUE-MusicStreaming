@@ -122,7 +122,7 @@ class DiaryController extends BaseController {
 		$entry->listening_duration					= Input::get('listening_duration');
 		$entry->recommendations_quality				= Input::get('recommendations_quality');
 		$entry->recommendations_comparison			= Input::get('recommendations_comparison');
-		$entry->most_listened						= (Input::get('most_listened') < 12 ?: Input::get('most-listened-other-input'));  
+		$entry->most_listened						= (Input::get('most_listened') < 12 ? Input::get('most_listened') : Input::get('most-listened-other-input'));  
 		$entry->free_notes							= (Input::get('free_notes') ?: null);
 		
 		$entry->completed_at = time();

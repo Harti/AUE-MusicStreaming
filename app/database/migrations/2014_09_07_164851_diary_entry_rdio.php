@@ -23,15 +23,15 @@ class DiaryEntryRdio extends Migration {
 						
 			$table->integer('listening_duration')->default(0);
 			
-			$table->integer('listened_to_trends')->default(0);
-			$table->integer('listened_to_news')->default(0);
-			$table->integer('listened_to_browse')->default(0);
-			$table->integer('listened_to_recommendations')->default(0);
-			$table->integer('listened_to_own_playlist')->default(0);
-			$table->integer('listened_to_favorite_playlist')->default(0);
-			$table->integer('listened_to_searched_songs')->default(0);
-			$table->integer('listened_to_channel')->default(0);
-			$table->integer('listened_to_custom_channel')->default(0);
+			$table->float('listened_to_trends')->default(0);
+			$table->float('listened_to_news')->default(0);
+			$table->float('listened_to_browse')->default(0);
+			$table->float('listened_to_recommendations')->default(0);
+			$table->float('listened_to_own_playlist')->default(0);
+			$table->float('listened_to_favorite_playlist')->default(0);
+			$table->float('listened_to_searched_songs')->default(0);
+			$table->float('listened_to_channel')->default(0);
+			$table->float('listened_to_custom_channel')->default(0);
 			
 			$table->integer('recommendations_quality')->default(0);
 			$table->integer('recommendations_comparison')->default(0);
