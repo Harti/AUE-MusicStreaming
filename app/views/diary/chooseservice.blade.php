@@ -54,7 +54,7 @@
             <h2>Alter</h2>
             <div class="row">
                 <div class="small-12 medium-3 columns">
-                    {{ Form::input('number', 'age')}}<br/>
+                    {{ Form::input('number', 'age')}}
                 </div>
             </div>
         </div>
@@ -114,19 +114,6 @@ $(function()
             }
         }
     }
-
-    // limits input for age field to numbers
-    var isNumberKey = function (evt){
-        var charCode = (evt.which) ? evt.which : event.keyCode
-        if (charCode > 31 && (charCode < 48 || charCode > 57)){
-            return false;
-        } else if(charCode === 13){
-            return false;
-        } else {
-            return true;
-        }
-    }
-    $("input[name=age]").on('keypress', isNumberKey);
 
     $("input").on('change', function()
     {
