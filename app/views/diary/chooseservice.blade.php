@@ -43,13 +43,30 @@
     		</div>
     	</div>
     	<div class="question">
-    		<h3>Wie gut kennst du den Dienst bereits?</h3>    		
+    		<h2>Wie gut kennst du den Dienst bereits?</h2>    		
            {{ Form::radio('familiarity', '0', true, array('id' => 'listening-duration0')) }}<label for="listening-duration0">keine Angabe</label><br />
            {{ Form::radio('familiarity', '1', (Input::old('listening-duration') == '1'), array('id' => 'listening-duration1')) }}<label for="listening-duration1">gar nicht / Ich habe ihn nur im Test benutzt</label><br />
            {{ Form::radio('familiarity', '2', (Input::old('listening-duration') == '2'), array('id' => 'listening-duration2')) }}<label for="listening-duration2">Ich habe ihn mal kurz benutzt (1-2 Mal)</label><br />
            {{ Form::radio('familiarity', '3', (Input::old('listening-duration') == '3'), array('id' => 'listening-duration3')) }}<label for="listening-duration3">Ich habe ihn schon oft benutzt (3+ Mal)</label><br />
            {{ Form::radio('familiarity', '4', (Input::old('listening-duration') == '4'), array('id' => 'listening-duration4')) }}<label for="listening-duration4">Ich nutze ihn im Alltag</label><br />
     	</div>
+        <div class="question">
+            <h2>Alter</h2>
+            <div class="row">
+                <div class="small-12 medium-3 columns">
+                    {{ Form::input('number', 'age')}}<br/>
+                </div>
+            </div>
+        </div>
+        <div class="question">
+            <h2>Geschlecht</h2>
+            {{ Form::radio('gender', 'männlich', false, array('id' => 'gender0')) }} <label for="gender0">männlich</label><br />
+            {{ Form::radio('gender', 'weiblich', false, array('id' => 'gender1')) }} <label for="gender1">weiblich</label>
+        </div>
+        <div class="question">
+            <h2>Wie wir mit deinen Daten umgehen:</h2>
+            <p>Deine Daten sind vollkommen anonym. So ist deine Emailadresse bei uns gespeichert: <code>{{ Auth::user()->email }}</code>. Selbst wir können sie also nicht einsehen.</p>
+        </div>
     	{{ Form::hidden('service', '0') }}
     	<hr />
     	<a id="finish" href="javascript:void(0);" class="large button expand disabled">Dienst auswählen</a>
@@ -68,17 +85,64 @@ $(function()
 		
 		$("form").submit();
 	};
-	
-	$("a#finish").on("click", submitForm);
-	
-	$(".bubble").on("click", function()
-	{
-	 	$(".bubble").removeClass("active");
-	 	$(this).addClass("active");
-	 	$("a#finish").removeClass("disabled");
-	 	$("a#finish").html(($(this).data("service") == 2 ? "rdio" : "Spotify") + " auswählen");
-	 	$("input[type=hidden]").val($(this).data("service"));
-	});
+
+    var checkForm = function()
+    {
+        var completedGroups = 0;
+
+        if($("input[name=gender]").is(":checked")){
+            completedGroups++;
+        }
+
+        if($("input[name=familiarity]").is(":checked")){
+            completedGroups++;
+        }
+
+        if($("input[name=service]").val() != 0){
+            completedGroups++;
+        }
+
+        if($("input[name=age]").val() != ''){
+            completedGroups++;
+        }
+
+        if(completedGroups === 4){
+            $("a#finish").removeClass("disabled");
+        } else {
+            if(!$("a#finish").hasClass("disabled")){
+                $("a#finish").addClass("disabled");
+            }
+        }
+    }
+
+    // limits input for age field to numbers
+    var isNumberKey = function (evt){
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57)){
+            return false;
+        } else if(charCode === 13){
+            return false;
+        } else {
+            return true;
+        }
+    }
+    $("input[name=age]").on('keypress', isNumberKey);
+
+    $("input").on('change', function()
+    {
+        checkForm();
+    });
+    
+    $("a#finish").on("click", submitForm);
+    
+    $(".bubble").on("click", function()
+    {
+        checkForm();
+        $(".bubble").removeClass("active");
+        $(this).addClass("active");
+        $("a#finish").html(($(this).data("service") == 2 ? "rdio" : "Spotify") + " auswählen");
+        $("input[type=hidden]").val($(this).data("service"));
+    });
 });
 </script>
 @stop
