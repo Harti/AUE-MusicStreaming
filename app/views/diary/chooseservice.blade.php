@@ -108,12 +108,27 @@ $(function()
 
         if(completedGroups === 4){
             $("a#finish").removeClass("disabled");
+            return true;
         } else {
             if(!$("a#finish").hasClass("disabled")){
                 $("a#finish").addClass("disabled");
             }
+            return false;
         }
     }
+
+    $("input[name=age]").on('keypress', function(){
+
+    })
+
+    $("form").on("submit", function(e)
+    {
+        if(!checkForm()) 
+        {
+            e.preventDefault();
+            return false;
+        }
+    });
 
     $("input").on('change', function()
     {
@@ -124,11 +139,11 @@ $(function()
     
     $(".bubble").on("click", function()
     {
-        checkForm();
         $(".bubble").removeClass("active");
         $(this).addClass("active");
         $("a#finish").html(($(this).data("service") == 2 ? "rdio" : "Spotify") + " auswählen");
         $("input[type=hidden]").val($(this).data("service"));
+        checkForm();
     });
 });
 </script>
