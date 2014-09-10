@@ -17,9 +17,11 @@
 		        	<li>Am Abend (wenn du nicht mehr vorhast, noch Musik zu streamen) besuchst du diese Internetseite und fügst deinem Tagebuch einen neuen Eintrag hinzu.</li>
 		        	<li>Das Ausfüllen sollte ungefähr fünf Minuten dauern.</li>
 		        	<li>Du kannst auch rückwirkend für vorherige Tage Einträge machen. Beispielsweise wenn du es vergessen hast oder es nach 24 Uhr ist.</li>
+		        	<li>Sei bei deinem Tagebucheintrag gerne kritisch mit dem Musik-Streamingdienst! (Aber gib ihm zugleich auch eine Chance, sich zu beweisen <i class="fa fa-smile-o"></i>)</li>
 		        </ul>   
-		        <p class="lead">Der Zeitraum dieser Studie endet am <strong>Sonntag, den 21. September 2014</strong>.</p>    
-		        <p>Unter <em>allen</em> Teilnehmern verlosen wir 2 Gutscheine von Amazon im Wert von jeweils 10 Euro.</p> 		
+		        <p class="lead">Der Zeitraum dieser Studie endet am <strong>Sonntag, den 21. September 2014</strong>.</p>
+		        <p>Habe bis einschließlich Sonntag bitte deinen fünften Eintrag erledigt.</p>    
+		        <p>Unter <em>allen</em> Teilnehmern verlosen wir 2 Gutscheine von Amazon im Wert von jeweils 10 Euro. Wir kontaktieren dich im Falle des Gewinns während der ersten Woche nach der Studie.</p> 		
 			</div>
 		</div>
 	</div>
