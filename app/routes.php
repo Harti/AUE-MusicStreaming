@@ -22,5 +22,12 @@ Route::group(array('prefix' => 'diary', 'before' => 'auth'), function()
     Route::get('/entry/{id}', 	'DiaryController@editEntry');
     Route::post('/entry/{id}', 	'DiaryController@postEntry');
 	
-	Route::post('/service', 		'DiaryController@postService');
+	Route::post('/service', 	'DiaryController@postService');
+});
+
+// Admin Stuff
+Route::group(array('prefix' => 'admin'), function()
+{
+	Route::get('/', 			'AdminController@getIndex');
+	Route::get('/charts',		'AdminController@getCharts');
 });
