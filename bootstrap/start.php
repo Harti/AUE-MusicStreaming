@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('Mutibook', 'Hartmut-PC', 'Machine', 'blackcookiejar'),
+	'local' => array('Mutibook', 'Hartmut-PC', 'Machine', 'blackcookiejar', 'Ordinator'),
 
 ));
 
