@@ -41,7 +41,7 @@ class SlopeTableSeeder extends Seeder {
 	
 	private function getSlope($userID, $genreID, $table)
 	{
-		$userListenedToGenreInstances = DB::table($table)->where('user_id', $userID)->where('most_listened', $genreID)->orderBy('day', 'asc');		
+		$userListenedToGenreInstances = DB::table($table)->where('user_id', $userID)->where('most_listened', $genreID)->where('recommender_percentage', '>', 0)->orderBy('day', 'asc');		
 		$amountOfDaysUserListenedToGenre = $userListenedToGenreInstances->count();
 		
 		if($amountOfDaysUserListenedToGenre <= 1) 
